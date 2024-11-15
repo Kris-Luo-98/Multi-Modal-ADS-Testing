@@ -1,0 +1,6 @@
+{
+   "Weather": "Cloudy",
+   "Time": "Daytime",
+   "Car type": "Ford Taurus",
+   "Validation": "Passed"
+}

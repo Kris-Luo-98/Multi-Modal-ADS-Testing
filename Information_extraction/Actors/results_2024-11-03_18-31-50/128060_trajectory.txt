@@ -1,0 +1,120 @@
+Analysis and Output for Provided Crash Case
+Based on the crash summary​, road network description, and the provided sketch:
+
+1. Road Setup
+Road Type: Eight-lane, limited access freeway (four lanes in each direction: eastbound and westbound) with a protected median divider.
+Road Length: 50 meters.
+Lane Width: 4 meters per lane.
+Conditions: Dark with artificial illumination, clear weather, and a dry road surface.
+2. Vehicle Identification
+Vehicle 1 (V1): 2001 Ford Taurus, 4-door sedan (classified as Car).
+
+Movement: Traveling east in the leftmost eastbound lane.
+Collision Sequence: The driver of V1 saw the oncoming headlights of V2, braked, and steered left in an attempt to avoid the collision, but V2 struck the front of V1 in an offset-frontal collision.
+Post-Collision Damage: V2 overrode V1's front, striking the right windshield area and rotating down the right side before separating. V1 experienced a minor fire in the right engine compartment after the collision.
+Vehicle 2 (V2): 1990 Ford Bronco II, 2-door utility vehicle (classified as Car).
+
+Movement: Traveling west in the left eastbound lane, facing oncoming traffic.
+Collision Sequence: Collided with V1 in an offset-frontal manner, resulting in significant override and contact with V1's right side.
+Post-Collision Damage: Continued down the side of V1 before separating.
+3. Coordinate System and Trajectory Mapping
+The origin is set at the bottom-left of the eastbound lanes, with:
+
+X-axis extending horizontally to the right (east-to-west direction).
+Y-axis extending vertically upwards.
+4. Estimated Trajectories (Pre-Collision Only)
+The trajectories reflect only the movement leading up to the collision, as final rest positions are unknown.
+
+V1's Trajectory (Car):
+
+Starting Point: In the leftmost eastbound lane at approximately 
+(
+10
+,
+2
+)
+(10,2).
+Path: Continues straight in the eastbound lane, braking and steering left upon seeing V2’s headlights, colliding with V2 in an offset-frontal manner.
+Collision Point: Impact with V2 at approximately 
+(
+25
+,
+2
+)
+(25,2).
+Trajectory Coordinates: 
+(
+10
+,
+2
+)
+(10,2), 
+(
+15
+,
+2
+)
+(15,2), 
+(
+20
+,
+2
+)
+(20,2), 
+(
+25
+,
+2
+)
+(25,2).
+V2's Trajectory (Car):
+
+Starting Point: In the left eastbound lane at approximately 
+(
+40
+,
+2
+)
+(40,2), traveling west.
+Path: Approaching V1 head-on in the wrong direction in the left eastbound lane, colliding with V1 in an offset-frontal manner.
+Collision Point: Impact with V1 at approximately 
+(
+25
+,
+2
+)
+(25,2).
+Trajectory Coordinates: 
+(
+40
+,
+2
+)
+(40,2), 
+(
+35
+,
+2
+)
+(35,2), 
+(
+30
+,
+2
+)
+(30,2), 
+(
+25
+,
+2
+)
+(25,2).
+Final Output
+
+{
+  "V1_traj": [(10, 2), (15, 2), (20, 2), (25, 2)],
+  "V1_type": "Car",
+  "V2_traj": [(40, 2), (35, 2), (30, 2), (25, 2)],
+  "V2_type": "Car",
+  "Validation": "Passed"
+}

@@ -1,0 +1,56 @@
+### Step 1 - Extract the Number of Ways and Lanes from Crash Summary
+
+1. **Identify Road Details for V1 and V2**:
+   - From the summary:
+     > "Vehicle one (V1 - case vehicle), a 1996 Ford Aspire, 3-door hatchback was traveling south in the southbound lane of a two-lane, two-way rural road. Vehicle two (V2), a 1980 Chevrolet C10, pickup truck was traveling north in the northbound lane of the same road."
+
+2. **Extract Key Information**:
+   - V1 is on a **two-lane, two-way rural road**, so:
+     - **number_of_ways_v1 = 2**
+     - **number_of_lanes_v1 = 2**
+   - V2 is on the same **two-lane, two-way rural road**, so:
+     - **number_of_ways_v2 = 2**
+     - **number_of_lanes_v2 = 2**
+
+3. **Determine Answers for Questions 1 and 2**:
+   - For **question 1** (ways): Take the maximum value between `number_of_ways_v1` and `number_of_ways_v2` → **No_ways = 2**
+   - For **question 2** (lanes): Take the maximum value between `number_of_lanes_v1` and `number_of_lanes_v2` → **No_lanes = 2**
+
+### Step 2 - Approximate the Longest Distance Across the Intersection
+
+1. **Analyze the Intersection in the Sketch**:
+   - The intersection is a 4-leg intersection with horizontal and vertical roads.
+   - V1 and V2 are on the horizontal road.
+
+2. **Calculate Horizontal Road Length**:
+   - V1 is on the horizontal road; knowing the car length is 5 meters, the horizontal road is about 9 car lengths.
+   - Calculation: `5 x 9 = 45` meters
+
+3. **Calculate Longitudinal Road Length**:
+   - The vertical road is shorter, approximately 6 car lengths.
+   - Calculation: `5 x 6 = 30` meters
+
+4. **Determine Answer for Question 3**:
+   - Take the maximum length between the horizontal and longitudinal roads → **Length = 45** meters
+
+### Step 3 - Estimate Lane Width
+
+1. **Determine Lane Width**:
+   - Given that this is a two-lane, two-way rural road, the typical lane width is **4 meters**.
+
+### Step 4 - Validation
+
+Our answers are: `{'No_ways': 2, 'No_lanes': 2, 'Length': 45, 'Width': 4}`
+
+**Validation**:
+1. **No_ways**: Matches the summary’s description of "two-way rural road."
+2. **No_lanes**: Matches the summary’s description of "two-lane."
+3. **Length**: 45 meters, consistent with 9 car lengths in the sketch (5 meters per car).
+4. **Width**: 4 meters, consistent with typical lane width based on car positioning in the sketch.
+
+Since all values align with the dataset, the validation is **Passed**.
+
+### Final Output
+```python
+{'No_ways': 2, 'No_lanes': 2, 'Length': 45, 'Width': 4, 'Validation': 'Passed'}
+```

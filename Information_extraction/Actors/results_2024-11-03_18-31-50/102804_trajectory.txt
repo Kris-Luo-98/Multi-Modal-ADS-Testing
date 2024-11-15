@@ -1,0 +1,104 @@
+Analysis and Output for Provided Crash Case
+Based on the crash summary​, road network description, and the provided sketch:
+
+1. Road Setup
+Road Type: Straight, two-way road with two lanes (one lane for each direction: eastbound and westbound).
+Road Length: 55 meters.
+Lane Width: 4 meters per lane.
+2. Vehicle Identification
+Vehicle 1 (V1): 1999 Ford Taurus, 4-door sedan (classified as Car).
+
+Movement: Traveling east in the eastbound lane with limited visibility due to an incompletely cleared windshield.
+Collision: The front of V1 struck the right side of V2 in a T-type collision.
+Vehicle 2 (V2): 2002 Chevrolet Tahoe, 4-door utility vehicle (classified as Car).
+
+Status: A marked police vehicle, stopped at an angle, blocking the eastbound lane.
+Collision: Struck on the right side by V1.
+3. Coordinate System and Trajectory Mapping
+The origin is set at the bottom-left of the eastbound lane (V1's lane), with:
+
+X-axis extending horizontally to the right (east direction).
+Y-axis extending vertically upwards.
+4. Estimated Trajectories
+The trajectories are derived from the vehicle movement descriptions and sketch, assuming 1 unit = 1 meter.
+
+V1's Trajectory (Car):
+
+Starting Point: In the eastbound lane, approaching from the west, approximately at 
+(
+10
+,
+2
+)
+(10,2).
+Path: Continues straight east in the eastbound lane.
+Collision Point: At approximately 
+(
+25
+,
+2
+)
+(25,2), where it collides with the right side of V2.
+Trajectory Coordinates: 
+(
+10
+,
+2
+)
+(10,2), 
+(
+20
+,
+2
+)
+(20,2), 
+(
+25
+,
+2
+)
+(25,2).
+V2's Position (Car):
+
+Starting Point: Stationary in the eastbound lane, blocking traffic, positioned diagonally near 
+(
+25
+,
+2
+)
+(25,2).
+Collision Point: Remains at 
+(
+25
+,
+2
+)
+(25,2) throughout, as it was stationary.
+Trajectory Coordinates: 
+(
+25
+,
+2
+)
+(25,2), 
+(
+25
+,
+2
+)
+(25,2), 
+(
+25
+,
+2
+)
+(25,2).
+Output
+
+{
+  "V1_traj": [(10, 2), (20, 2), (25, 2)],
+  "V1_type": "Car",
+  "V2_traj": [(25, 2), (25, 2), (25, 2)],
+  "V2_type": "Car",
+  "Validation": "Passed"
+}

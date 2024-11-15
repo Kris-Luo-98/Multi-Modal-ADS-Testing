@@ -1,0 +1,34 @@
+### Analysis Process
+
+#### Step 1 - Extract the Number of Ways and Lanes
+1. **Read the crash summary** to identify the number of ways and lanes:
+   - Example sentence: "Vehicle one (V1 - case vehicle), a 2000 GMC Sonoma, 3-door extended cab pickup truck was traveling north in the left northbound lane of a four-lane, two-way road (two lanes northbound, two lanes southbound)."
+2. **Identify Key Descriptors**:
+   - "Two-way" describes the **number of ways** (answer: 2).
+   - "Four-lane" describes the **number of lanes** (answer: 4).
+
+#### Step 2 - Estimate Road Length and Lane Width from the Sketch
+1. **Road Length**:
+   - The sketch shows a straight road with multiple vehicles.
+   - Measure the road's length using car body lengths as a reference. There are approximately 10 car lengths visible.
+   - Calculation: \(5 \, \text{meters} \times 10 = 50 \, \text{meters}\).
+   
+2. **Lane Width**:
+   - The vehicles (V1 and V2) occupy the lanes, and the width of a lane can be estimated based on the width of the vehicles.
+   - The width of a car is approximately 2 meters, and there is some space on either side of the vehicle within the lane.
+   - Estimate lane width as the car’s width (2 meters) plus some buffer space.
+   - Calculation: \(2 + 1 + 1 = 4 \, \text{meters}\).
+
+#### Step 3 - Validation
+Verify the extracted values with the dataset:
+- **No_ways** = 2: Matches the "two-way road" description in the summary.
+- **No_lanes** = 4: Matches the "four-lane" description in the summary.
+- **Length** = 50 meters: Consistent with 10 car lengths, as observed in the sketch.
+- **Width** = 4 meters: Consistent with the car’s width and spacing within the lane.
+
+Since all values align with the data, the validation is **Passed**.
+
+### Final Output
+```python
+{'No_ways': 2, 'No_lanes': 4, 'Length': 50, 'Width': 4, 'Validation': 'Passed'}
+```

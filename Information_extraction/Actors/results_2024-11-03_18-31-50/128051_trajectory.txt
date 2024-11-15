@@ -1,0 +1,156 @@
+Analysis and Output for the Crash Case
+1. Road Setup
+Road Type: Four-lane, two-way road (two lanes in each direction with a centerline).
+Road Length: 50 meters.
+Lane Width: 4 meters per lane.
+Conditions: Daylight, clear weather, and a dry road surface.
+2. Vehicle Identification
+Vehicle 1 (V1): 1999 Dodge Durango, 4-door utility vehicle (classified as Car).
+
+Movement: Traveling north in the left northbound lane.
+Collision Sequence: V2, after being struck from behind by V3, crossed into the northbound lane, colliding with V1 in an offset frontal collision.
+Vehicle 2 (V2): 1999 Mercury Villager, minivan (classified as Car).
+
+Movement: Traveling south in the left southbound lane, decelerating.
+Collision Sequence: Rear-ended by V3, causing V2 to veer left, cross the centerline, and collide with V1 in the northbound lane.
+Vehicle 3 (V3): 2004 Jeep Liberty, 4-door utility vehicle (classified as Car).
+
+Movement: Traveling south in the left southbound lane behind V2.
+Collision Sequence: Did not notice V2 decelerating, resulting in a rear-end collision with V2.
+3. Coordinate System and Trajectory Mapping
+The origin is set at the bottom-left of the northbound lanes, with:
+
+X-axis extending horizontally to the right (north-to-south direction).
+Y-axis extending vertically upwards.
+4. Corrected Trajectories
+The trajectories are now aligned with the specified paths for V2 and V3.
+
+V1's Trajectory (Car):
+
+Starting Point: In the left northbound lane at approximately 
+(
+10
+,
+6
+)
+(10,6).
+Path: Continues straight in the northbound lane, colliding with V2 at approximately 
+(
+25
+,
+6
+)
+(25,6).
+Trajectory Coordinates: 
+(
+10
+,
+6
+)
+(10,6), 
+(
+15
+,
+6
+)
+(15,6), 
+(
+20
+,
+6
+)
+(20,6), 
+(
+25
+,
+6
+)
+(25,6).
+V2's Trajectory (Car):
+
+Starting Point: In the left southbound lane at approximately 
+(
+40
+,
+10
+)
+(40,10).
+Path: Decelerating, then struck by V3 from behind, causing V2 to veer left, cross the centerline, and collide with V1 in the northbound lane.
+Collision Point: Impact with V1 at approximately 
+(
+25
+,
+6
+)
+(25,6).
+Trajectory Coordinates: 
+(
+40
+,
+10
+)
+(40,10), 
+(
+35
+,
+10
+)
+(35,10), 
+(
+30
+,
+8
+)
+(30,8), 
+(
+25
+,
+6
+)
+(25,6).
+V3's Trajectory (Car):
+
+Starting Point: In the left southbound lane at approximately 
+(
+45
+,
+10
+)
+(45,10).
+Path: Approaches V2 from behind and collides with the rear of V2 at approximately 
+(
+40
+,
+10
+)
+(40,10).
+Trajectory Coordinates: 
+(
+45
+,
+10
+)
+(45,10), 
+(
+42
+,
+10
+)
+(42,10), 
+(
+40
+,
+10
+)
+(40,10).
+Final Output
+
+{
+  "V1_traj": [(10, 6), (15, 6), (20, 6), (25, 6)],
+  "V1_type": "Car",
+  "V2_traj": [(40, 10), (35, 10), (30, 8), (25, 6)],
+  "V2_type": "Car",
+  "V3_traj": [(45, 10), (42, 10), (40, 10)],
+  "V3_type": "Car",
+  "Validation": "Passed"
+}

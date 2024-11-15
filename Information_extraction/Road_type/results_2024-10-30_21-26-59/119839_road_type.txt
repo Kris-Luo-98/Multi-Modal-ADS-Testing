@@ -1,0 +1,18 @@
+### Step 1 - Extract the Road Type
+From the crash summary:
+- V1 was traveling on a five-lane, two-way road and was approaching a **T-intersection**.
+- V2 was traveling on a two-lane, two-way road that intersected with the east-west road.
+- The crash occurred at a **T-intersection**.
+
+Based on this description, the road type is **T-intersection**.
+
+### Step 2 - Validation
+From the sketch:
+- The road network shows a main road with multiple lanes (east-west) and a smaller road (north-south) intersecting it.
+- The smaller road ends at the main road, forming a **T-shape**.
+- There are no other intersecting roads, confirming the **T-intersection**.
+
+### Output
+The road type extracted from the summary matches the road network depicted in the sketch.
+
+`{'Road type': T-intersection, 'Validation': Pass}`

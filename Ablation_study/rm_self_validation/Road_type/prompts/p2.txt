@@ -1,0 +1,19 @@
+### Analysis Process
+
+#### Step 1 - Extract the Road Type
+1. **Read the crash summary** to identify road features:
+   - Example: "V1 was traveling on a curved, two-lane, two-way road, and V2 was also traveling on this curved road."
+2. **Determine the road type** based on the description. For example:
+   - If the summary describes a "curved road" with no intersections, classify the road as **Curve**.
+
+#### Step 2 - Validation
+1. **Focus on road boundaries** in the sketch:
+   - Ignore vehicles, labels, and arrows. Observe the long, solid or dashed black lines representing road boundaries.
+2. **Confirm road type**:
+   - For a curved road, look for **parallel curved lines** extending from one side of the sketch to the other, with no intersecting roads.
+
+3. If the sketch details match the road type extracted from the summary, confirm the road type as validated.
+
+### Output
+Provide the result in this format, without quotation marks:
+{'Road type': Curve, 'Validation': Pass}

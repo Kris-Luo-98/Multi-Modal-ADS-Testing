@@ -1,0 +1,126 @@
+Analysis and Output for the Crash Case
+1. Road Setup
+Road Type: Two-lane, two-way rural roadway (one lane in each direction: northbound and southbound).
+Road Length: 50 meters.
+Lane Width: 4 meters per lane.
+2. Vehicle Identification
+Vehicle 1 (V1): 1999 Chevrolet S10, 2-door pickup truck (classified as Car).
+
+Movement: Traveling north in the northbound lane. Driver reportedly fell asleep, causing V1 to drift left across the centerline into the southbound lane.
+Collision Sequence:
+Drifted into the southbound lane.
+First impact: Front of V1 struck the left side of V2’s power unit, causing V1 to rotate counterclockwise along V2's side.
+Separation from V2: After impact, V1 continued off the right side of the road, coming to rest in a ditch facing northeast.
+Vehicle 2 (V2): Tractor-trailer of unknown make/model (classified as Truck).
+
+Movement: Traveling south in the southbound lane.
+Collision Sequence:
+Impacted by V1 on the left side of the power unit, causing a fuel tank rupture.
+Fire: Fuel tank rupture led to a fire.
+Post-collision: V2 departed the roadway to the right, ultimately colliding with a tree.
+3. Coordinate System and Trajectory Mapping
+The origin is set at the bottom-left of the northbound lane, with:
+
+X-axis extending horizontally to the right (north-to-south direction).
+Y-axis extending vertically upwards.
+4. Corrected Trajectories
+The trajectories are now aligned with the specified path for V2.
+
+V1's Trajectory (Car):
+
+Starting Point: In the northbound lane at approximately 
+(
+10
+,
+2
+)
+(10,2).
+Path: Drifts left across the centerline into the southbound lane, collides with V2, rotates counterclockwise along V2, then exits the roadway to the right, ending in a ditch.
+Collision Point: Impact with V2 at approximately 
+(
+20
+,
+4
+)
+(20,4).
+Trajectory Coordinates: 
+(
+10
+,
+2
+)
+(10,2), 
+(
+15
+,
+3
+)
+(15,3), 
+(
+20
+,
+4
+)
+(20,4), 
+(
+25
+,
+5
+)
+(25,5).
+V2's Trajectory (Truck):
+
+Starting Point: In the southbound lane at approximately 
+(
+45
+,
+6
+)
+(45,6).
+Path: Continues south in the southbound lane, colliding with V1 at approximately 
+(
+20
+,
+4
+)
+(20,4) and then moving off the road after the impact.
+Trajectory Coordinates: 
+(
+45
+,
+6
+)
+(45,6), 
+(
+40
+,
+6
+)
+(40,6), 
+(
+35
+,
+6
+)
+(35,6), 
+(
+30
+,
+6
+)
+(30,6), 
+(
+25
+,
+5
+)
+(25,5).
+Final Output
+
+{
+  "V1_traj": [(10, 2), (15, 3), (20, 4), (25, 5)],
+  "V1_type": "Car",
+  "V2_traj": [(45, 6), (40, 6), (35, 6), (30, 6), (25, 5)],
+  "V2_type": "Truck",
+  "Validation": "Passed"
+}

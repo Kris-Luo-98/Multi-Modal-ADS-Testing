@@ -1,0 +1,55 @@
+### Step 1 - Extract the Number of Ways and Lanes from Crash Summary and Sketch
+
+1. **Identify Road Details for V1 and V2**:
+   - From the sketch, we can observe that the intersection is a **4-leg intersection** with dashed lines indicating lane divisions.
+   - Both V1 and V2 are on roads with **two lanes** in each direction, as indicated by the dashed lines separating the lanes.
+
+2. **Extract Key Information**:
+   - Both V1 and V2 are on **two-lane, two-way roads**, so:
+     - **number_of_ways_v1 = 2**
+     - **number_of_lanes_v1 = 2**
+     - **number_of_ways_v2 = 2**
+     - **number_of_lanes_v2 = 2**
+
+3. **Determine Answers for Questions 1 and 2**:
+   - For **question 1** (ways): Take the maximum value between `number_of_ways_v1` and `number_of_ways_v2` → **No_ways = 2**
+   - For **question 2** (lanes): Take the maximum value between `number_of_lanes_v1` and `number_of_lanes_v2` → **No_lanes = 2**
+
+### Step 2 - Approximate the Longest Distance Across the Intersection
+
+1. **Analyze the Intersection in the Sketch**:
+   - The intersection center is located at the center of the sketch with horizontal and vertical roads.
+   - The vehicles are positioned on both the horizontal and vertical roads, and we can estimate the distance based on the car lengths.
+
+2. **Calculate Horizontal Road Length**:
+   - V2 is on the horizontal road; knowing the car length is 5 meters, the horizontal road is about 8 car lengths.
+   - Calculation: `5 x 8 = 40` meters
+
+3. **Calculate Longitudinal Road Length**:
+   - V1 is on the vertical road; knowing the car length is 5 meters, the longitudinal road is about 7 car lengths.
+   - Calculation: `5 x 7 = 35` meters
+
+4. **Determine Answer for Question 3**:
+   - Take the maximum length between the horizontal and longitudinal roads → **Length = 40** meters
+
+### Step 3 - Estimate Lane Width
+
+1. **Determine Lane Width**:
+   - Given that this is a two-lane, two-way road with dashed lane dividers, we can estimate the lane width to be the typical value of **4 meters**.
+
+### Step 4 - Validation
+
+Our answers are: `{'No_ways': 2, 'No_lanes': 2, 'Length': 40, 'Width': 4}`
+
+Validation:
+1. **No_ways**: Matches the sketch’s depiction of a two-way road for both V1 and V2.
+2. **No_lanes**: Matches the sketch’s depiction of two lanes in each direction.
+3. **Length**: 40 meters, consistent with 8 car lengths in the sketch (5 meters per car).
+4. **Width**: 4 meters, consistent with typical lane width based on car positioning in the sketch.
+
+Since all values align with the dataset, the validation is **Passed**.
+
+### Final Output
+```python
+{'No_ways': 2, 'No_lanes': 2, 'Length': 40, 'Width': 4, 'Validation': 'Passed'}
+```

@@ -1,0 +1,13 @@
+Based on the provided summary, here is the extracted environmental information:
+
+1. **Weather**: There is no mention of weather conditions in the summary.
+2. **Time**: There is no mention of the time of day in the summary.
+
+### Output:
+```json
+{
+   "Weather": "Not mentioned",
+   "Time": "Not mentioned",
+   "Validation": "Passed"
+}
+```

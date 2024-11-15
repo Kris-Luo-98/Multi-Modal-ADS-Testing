@@ -1,0 +1,1 @@
+Fleiss' Kappa coeff: 0.7768

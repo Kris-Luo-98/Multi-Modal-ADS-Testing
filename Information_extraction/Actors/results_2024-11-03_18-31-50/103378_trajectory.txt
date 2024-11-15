@@ -1,0 +1,30 @@
+Road Network and Lane Setup
+Lane Width: 4 meters, so each lane is 2 meters on either side of the lane center.
+Coordinate Adjustments: Each vehicle’s trajectory will stay 2 meters offset from the centerline to reflect correct lane usage.
+
+Trajectories Based on Lane Position and Width
+Vehicle 1 (V1) - Car
+Approaching from the North (Southbound Lane):
+
+Trajectory Points:
+Starting at (20, 2) in the southbound lane.
+Moving southward toward the center of the intersection at (15, 0).
+Drifting further left and reaching the collision point at (10, -2).
+V1 Trajectory: [(20, 2), (15, 0), (10, -2)]
+
+Vehicle 2 (V2) - Car
+Approaching from the South (Northbound Lane):
+
+Trajectory Points:
+Starting at (-5, -2) in the northbound lane.
+Moving northward along the lane towards (5, -2).
+Reaching the collision point at (10, -2).
+V2 Trajectory: [(-5, -2), (5, -2), (10, -2)]
+
+{
+  "V1_traj": [(20, 2), (15, 0), (10, -2)],
+  "V1_type": "Car",
+  "V2_traj": [(-5, -2), (5, -2), (10, -2)],
+  "V2_type": "Car",
+  "Validation": "Passed"
+}

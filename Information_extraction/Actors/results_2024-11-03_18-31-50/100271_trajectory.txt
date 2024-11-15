@@ -1,0 +1,36 @@
+Step 1: Establishing the Coordinate System
+For a T-intersection:
+
+Place the origin (0, 0) at the center of the intersection.
+The main road extends horizontally along the X-axis (east-west).
+The branch road extends vertically along the Y-axis (north-south).
+Each lane is 4 meters wide, as per the road network information.
+
+Step 2: Identifying Vehicle Types and Initial Positions
+From the crash summary and output details:
+
+V1 is confirmed as a Car (2001 Chrysler Sebring) traveling in the branch road, initially moving eastbound (negative X-direction) toward the intersection and then turning left (northbound).
+V2 is identified as a Car (previously thought to be a truck but identified here as a car based on the output) traveling southbound (negative Y-direction) on the main road through-lane.
+Step 3: Mapping Trajectories
+Vehicle 1 (V1) Trajectory
+V1 starts in the branch road, traveling east toward the intersection.
+Approximate trajectory:
+Starting at (-2, -10), moving north-east along the branch road.
+Intermediate points at (-2, -5), approaching the intersection.
+Reaches the center of the intersection at (0, 0), where it begins its left turn.
+Completes the turn and moves to (-5, 2), northbound in the intersection.
+Vehicle 2 (V2) Trajectory
+V2 starts on the main road, traveling southbound.
+Approximate trajectory:
+Starting at (-10, -2) and moving eastward on the main road’s southbound lane.
+Intermediate point at (-5, -2), approaching the intersection.
+Reaches the collision point at (0, -2), where it strikes the left side of V1.
+Step 4: Revised Output
+The output, with the new trajectory details, is as follows:
+{
+  "V1_traj": [(-2, -10), (-2, -5), (0, 0), (-5, 2)],
+  "V1_type": "Car",
+  "V2_traj": [(-10, -2), (-5, -2), (0, -2)],
+  "V2_type": "Car",
+  "Validation": "Passed"
+}

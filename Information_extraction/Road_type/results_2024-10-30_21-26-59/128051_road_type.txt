@@ -1,0 +1,18 @@
+### Step 1 - Extract the Road Type
+From the crash summary, we can extract the following road features:
+- The crash occurred on a **four-lane, two-way roadway** (two lanes northbound, two lanes southbound).
+- There is no mention of any curves or merging lanes.
+- The crash occurred as V2 crossed the centerline into the path of V1, indicating a straight road.
+
+Based on this description, the road type is likely **Straight**.
+
+### Step 2 - Validation
+Now, let's validate this against the sketch:
+- The sketch shows **parallel straight lines** representing the road boundaries, with no curves or intersections.
+- The road is divided into **four lanes** (two northbound and two southbound), matching the description in the summary.
+- There are no intersecting roads or merging lanes visible in the sketch.
+
+Since the sketch confirms a straight road with no intersections or curves, the road type is validated as **Straight**.
+
+### Output
+{'Road type': Straight, 'Validation': Pass}

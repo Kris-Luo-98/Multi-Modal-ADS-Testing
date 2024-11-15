@@ -1,0 +1,20 @@
+Based on the provided summary, here is the extracted environmental information and validation:
+
+### Step 1: Environment Information Extraction
+- **Weather**: The summary states, "It was daylight, raining." Therefore, the weather is **"Rainy"**.
+- **Time**: The summary mentions "daylight," so the time is **"Daytime"**.
+
+### Step 2: Validation
+- **Weather**: Our answer "Rainy" corresponds to "raining" in the crash summary.
+- **Time**: Our answer "Daytime" corresponds to "daylight" in the crash summary.
+
+Validation passed!
+
+### Final Output:
+```json
+{
+   "Weather": "Rainy",
+   "Time": "Daytime",
+   "Validation": "Passed"
+}
+```

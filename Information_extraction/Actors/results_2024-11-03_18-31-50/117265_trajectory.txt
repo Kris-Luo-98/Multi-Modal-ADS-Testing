@@ -1,0 +1,41 @@
+Road Network and Coordinate Setup
+Road Type: Intersection (4-leg).
+Lane Configuration: Five-lane, two-way road (two lanes in each direction and a center left-turn lane).
+Lane Width: 3.5 meters per lane.
+Coordinate System: Origin is at the center of the intersection, with the X-axis extending horizontally and the Y-axis vertically.
+Vehicle and Collision Information
+V1: 2004 Ford Focus (Station Wagon), traveling north in the left northbound lane.
+V2: 1997 GMC G10 (Cargo Van), traveling south and attempting a left turn across the path of V1.
+Collision Point: In the intersection, where the front of V2 struck the left side of V1.
+Post-Collision Dynamics:
+V2 rotated counterclockwise approximately 80 degrees and came to rest in the intersection facing north-northeast.
+V1 also came to rest in the intersection, facing north-northeast.
+
+Trajectories
+
+Vehicle 1 (V1) - Station Wagon
+Trajectory Points:
+
+Starting at (2, -15) in the northbound left lane.
+Moving toward the intersection at (2, -10).
+Collision at the center of the intersection at (0, 0).
+Final resting position in the intersection at (2, 2), facing north-northeast.
+V1 Trajectory: [(2, -15), (2, -10), (0, 0), (2, 2)]
+
+Vehicle 2 (V2) - Cargo Van
+Trajectory Points:
+
+Starting at (-2, 15) in the southbound lane.
+Moving toward the intersection at (-2, 10).
+Initiating left turn at (-1, 5).
+Collision at the center of the intersection at (0, 0).
+Final resting position in the intersection at (2, -2), facing north-northeast.
+V2 Trajectory: [(-2, 15), (-2, 10), (-1, 5), (0, 0), (2, -2)]
+
+{
+  "V1_traj": [(2, -15), (2, -10), (0, 0), (2, 2)],
+  "V1_type": "Car",
+  "V2_traj": [(-2, 15), (-2, 10), (-1, 5), (0, 0), (2, -2)],
+  "V2_type": "Car",
+  "Validation": "Passed"
+}

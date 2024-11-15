@@ -1,0 +1,6 @@
+### Example Case for Familiarization:
+---
+#### Summary:
+> Vehicle one (V1 - case vehicle), a 2000 Chevrolet Malibu, 4-door sedan, was traveling north in the right northbound lane of a limited access, four-lane, divided freeway (two lanes northbound, open median, two lanes southbound). Vehicle two (V2), a 1998 International tractor-trailer, was traveling north in the left northbound lane of the same roadway, slightly behind V1. For an unknown reason, V1 veered left into the left northbound lane, and V2’s front struck V1’s left side. The driver of V1, who was unrestrained and without airbag deployment, sustained fatal injuries three months later due to unrelated illness. Both vehicles were towed due to disabling damage.
+
+#### Sketch:

@@ -1,0 +1,6 @@
+{
+   "Weather": "Cloudy",
+   "Time": "Daytime",
+   "Car type": "Volkswagen New Beetle",
+   "Validation": "Passed"
+}

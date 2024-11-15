@@ -1,0 +1,31 @@
+In this task, I will provide a summary of a car crash along with its corresponding crash sketch and road network description. Based on this information, please extract the movement trajectories (2D coordinates) of the vehicles involved in the crash.
+
+### Steps to Complete:
+---
+1. **Construct the Coordinate System**:
+   - Use the road network information to determine the road structure and set up a real-world 2D coordinate system.
+2. **Identify Vehicles**:
+   - From the crash summary, identify all vehicles involved and match them with the vehicles shown in the sketch.
+   - Determine each vehicle’s type from the sketch (choose between "Car" or "Truck"). If the length of the vehicle is about 5 meters, it should be uniformly classified as a car, such as a minivan or a pickup. A vehicle with a length much longer than 5 meters is classified as a truck.
+3. **Map Starting and Collision Points**:
+   - Locate the starting positions and collision points of each vehicle using the crash sketch and summary.
+   - Transfer these points to the coordinate system, then use trajectory prediction to estimate each vehicle’s path from its starting point to the collision point.
+4. **Verify Trajectories**:
+   - Ensure the trajectories align with the movement descriptions in the summary. If consistent, output the vehicle trajectories in the required format.
+
+### Guidelines:
+---
+1. **Coordinate System Setup**:
+   - Each unit of length in the coordinate system represents **1 meter**.
+   
+2. **Road Structure and Coordinate System Origins**:
+   - **Straight Road**: Ensure the road is horizontal; rotate the image if necessary. Set the origin at the far-left bottom of the road. The X-axis extends horizontally to the right, and the Y-axis vertically upwards.
+   - **Intersection**: Place the origin at the intersection center, with roads extending along the coordinate axes.
+   - **T-intersection**: Orient the road in a T-shape; rotate if needed. Set the origin at the center, with roads extending along the coordinate axes.
+   - **Curve**: Place the origin at the far-left bottom of the curve, with the X-axis extending horizontally to the right and the Y-axis vertically upwards.
+   - **Merge**: Ensure the main road is horizontal, with the merging road from bottom left to top right; rotate if needed. Place the origin at the far-left bottom of the main road, with the X-axis extending to the right and the Y-axis upwards.
+
+3. **Coordinate Estimation**:
+   - Use the following values to estimate coordinates:
+     - **Vehicle Length**: 5 meters, **Vehicle Width**: 2 meters, the length of a Truck is usually 15 meters and the width is 3 meters;
+     - **Road Width**: Typically 4 meters, derived from vehicle width.

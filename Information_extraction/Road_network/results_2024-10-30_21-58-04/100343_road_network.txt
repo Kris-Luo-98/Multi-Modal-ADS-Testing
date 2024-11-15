@@ -1,0 +1,34 @@
+### Analysis Process
+
+#### Step 1 - Extract the Number of Ways and Lanes
+1. **Read the crash summary** to identify the number of ways and lanes:
+   - Example sentence: "Vehicle one (V1 - case vehicle), a 2000 Chevrolet Malibu, 4-door sedan was traveling north in the right northbound lane of a limited access, four-lane, divided freeway (two lanes northbound, open median, two lanes southbound)."
+2. **Identify Key Descriptors**:
+   - "Divided freeway" with "two lanes northbound" and "two lanes southbound" describes the **number of ways** (answer: 2).
+   - "Four-lane" describes the **total number of lanes** (answer: 4).
+
+#### Step 2 - Estimate Road Length and Lane Width from the Sketch
+1. **Road Length**:
+   - The sketch shows a straight road with vehicles V1 and V2.
+   - Measure the road's length using the truck (V2) as a reference (truck length = 20 meters).
+   - The road appears to be approximately 6 truck lengths long.
+   - Calculation: \(20 \, \text{meters} \times 6 = 120 \, \text{meters}\).
+   
+2. **Lane Width**:
+   - The truck (V2) occupies the left lane, and its width is 2.5 meters.
+   - Estimate lane width as the truck’s width plus some space on each side.
+   - Calculation: \(2.5 + \frac{2.5}{2} + \frac{2.5}{2} = 5 \, \text{meters}\).
+
+#### Step 3 - Validation
+Verify the extracted values with the dataset:
+- **No_ways** = 2: Matches the "divided freeway" description in the summary.
+- **No_lanes** = 4: Matches the "four-lane" description in the summary.
+- **Length** = 120 meters: Consistent with 6 truck lengths, as observed in the sketch.
+- **Width** = 5 meters: Consistent with the truck’s width and spacing within the lane.
+
+Since all values align with the data, the validation is **Passed**.
+
+### Final Output
+```python
+{'No_ways': 2, 'No_lanes': 4, 'Length': 120, 'Width': 5, 'Validation': 'Passed'}
+```

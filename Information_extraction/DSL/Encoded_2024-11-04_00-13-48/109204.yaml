@@ -1,0 +1,18 @@
+Actors:
+  V1_traj: '[(30, 1.75), (20, 1.75), (10, 0), (5, -5)]'
+  V1_type: Car
+  V2_traj: '[(0, -1.75), (5, -1.75), (10, 0), (15, -1.75)]'
+  V2_type: Truck
+  Validation: Passed
+Env:
+  Time: Daytime
+  Validation: Passed
+  Weather: Sunny
+Road network:
+  Length: 120
+  No_lanes: 5
+  No_ways: 2
+  Validation: Passed
+  Width: 3.5
+Road type: Intersection
+Scenario: '109204'

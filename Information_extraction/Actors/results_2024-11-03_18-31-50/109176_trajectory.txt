@@ -1,0 +1,99 @@
+Analysis and Output for the Crash Case
+1. Road Setup
+Road Type: Straight, four-lane divided freeway with an unprotected median (two lanes for each direction: southbound and northbound).
+Road Length: 50 meters.
+Lane Width: 4 meters per lane.
+2. Vehicle Identification
+Vehicle 1 (V1): 2002 Pontiac Aztek, 4-door utility vehicle (classified as Car).
+Movement: Traveling south in the right southbound lane, approaching V2.
+Collision: Front of V1 struck the rear of V2's trailer.
+Vehicle 2 (V2): 2000 Chevrolet K3500, crew cab pickup pulling a three-axle auto transport trailer (classified as Truck).
+Movement: Traveling south in the right southbound lane, ahead of V1 and moving slower due to traffic congestion.
+Collision: Rear of V2's trailer was struck by the front of V1.
+3. Coordinate System and Trajectory Mapping
+The origin is set at the bottom-left of the southbound lanes, with:
+
+X-axis extending horizontally to the right (south-to-north direction).
+Y-axis extending vertically upwards.
+4. Corrected Trajectories
+The trajectories are now aligned with the specified paths.
+
+V1's Trajectory (Car):
+
+Starting Point: In the right southbound lane at approximately 
+(
+10
+,
+2
+)
+(10,2).
+Path: Continues north, following V2 in the same lane, and collides with the rear of V2’s trailer at approximately 
+(
+25
+,
+2
+)
+(25,2).
+Trajectory Coordinates: 
+(
+10
+,
+2
+)
+(10,2), 
+(
+15
+,
+2
+)
+(15,2), 
+(
+20
+,
+2
+)
+(20,2), 
+(
+25
+,
+2
+)
+(25,2).
+V2's Trajectory (Truck with Trailer):
+
+Starting Point: Ahead of V1 in the right southbound lane at approximately 
+(
+25
+,
+2
+)
+(25,2).
+Path: Continues forward in the right southbound lane, with minor forward movement after impact.
+Trajectory Coordinates: 
+(
+25
+,
+2
+)
+(25,2), 
+(
+30
+,
+2
+)
+(30,2), 
+(
+30
+,
+2
+)
+(30,2).
+Final Output
+
+{
+  "V1_traj": [(10, 2), (15, 2), (20, 2), (25, 2)],
+  "V1_type": "Car",
+  "V2_traj": [(25, 2), (30, 2), (30, 2)],
+  "V2_type": "Truck",
+  "Validation": "Passed"
+}

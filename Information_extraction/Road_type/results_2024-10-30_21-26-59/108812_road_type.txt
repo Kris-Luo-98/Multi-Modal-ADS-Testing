@@ -1,0 +1,17 @@
+### Step 1 - Extract the Road Type
+From the crash summary:
+- Both vehicles (V1 and V2) were traveling on a **two-lane, two-way rural roadway**.
+- Both vehicles were **negotiating a slight curve** (V1 to the left, V2 to the right).
+- There is no mention of intersections, merges, or T-intersections.
+
+Based on this description, the road type is a **Curve**.
+
+### Step 2 - Validation
+From the sketch:
+- The road is depicted with **curved parallel lines** extending from one side of the sketch to the other.
+- There are no intersecting roads or additional openings, confirming that this is a **curved road**.
+
+The sketch matches the road type extracted from the summary.
+
+### Output
+{'Road type': Curve, 'Validation': Pass}

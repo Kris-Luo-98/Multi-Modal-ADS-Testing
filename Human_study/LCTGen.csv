@@ -1,0 +1,16 @@
+﻿Scenario ID,response 1,response 2,response 3,response 4,response 5,,,,,
+99817,Mostly not match,Mostly not match,Mostly not match,Mostly not match,Mostly not match,,,,Totally match,0
+100343,Partially match,Partially match,Partially match,Partially match,Partially match,,,,Mostly match,4
+103378,Partially match,Partially match,Partially match,Partially match,Partially match,,,,Partially match,5
+108812,Mostly match,Partially match,Mostly match,Mostly match,Mostly match,,,,Mostly not match,4
+109204,Partially match,Partially match,Partially match,Partially match,Partially match,,,,Totally not match,2
+109536,Mostly not match,Mostly not match,Mostly not match,Mostly not match,Mostly not match,,,,,
+115568,Partially match,Partially match,Partially match,Partially match,Partially match,,,,,
+117021,Partially match,Partially match,Mostly not match,Partially match,Partially match,,,,,
+117330,Partially match,Partially match,Partially match,Partially match,Partially match,,,,,
+119897,Mostly not match,Mostly not match,Mostly not match,Mostly not match,Mostly not match,,,,,
+120516,Totally not match,Totally not match,Totally not match,Totally not match,Totally not match,,,,,
+121251,Totally not match,Totally not match,Totally not match,Totally not match,Totally not match,,,,,
+122157,Partially match,Mostly match,Mostly match,Mostly match,Mostly match,,,,,
+128051,Mostly match,Mostly match,Mostly match,Mostly match,Mostly match,,,,,
+128062,Mostly match,Mostly match,Mostly match,Mostly match,Mostly match,,,,,

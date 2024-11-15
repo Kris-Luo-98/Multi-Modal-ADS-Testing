@@ -1,0 +1,118 @@
+Analysis and Output for the Crash Case
+1. Road Setup
+Road Type: Five-lane, two-way road (two lanes northbound, a dual center-turn lane, and two lanes southbound).
+Road Length: 50 meters.
+Lane Width: 4 meters per lane.
+Conditions: Dark, clear weather, and a dry road surface.
+2. Vehicle Identification
+Vehicle 1 (V1): 2003 Pontiac Grand Am, 4-door sedan (classified as Car).
+
+Movement: Traveling north in the inside northbound lane.
+Collision Sequence: V1 continued straight but collided with V2 as V2 drifted into its lane.
+Post-Collision Position: V1 sustained disabling front-end damage and was towed from the scene.
+Vehicle 2 (V2): 1997 Ford Taurus, 4-door sedan (classified as Car).
+
+Movement: Traveling south in the inside southbound lane, then drifted left across the center-turn lane into V1’s path.
+Collision Sequence: V2 collided with V1 in an offset-frontal manner as it drifted into the northbound lane.
+Post-Collision Position: V2 also sustained disabling damage and was towed from the scene.
+3. Coordinate System and Trajectory Mapping
+The origin is set at the bottom-left of the northbound lanes, with:
+
+X-axis extending horizontally to the right (north-to-south direction).
+Y-axis extending vertically upwards.
+4. Corrected Trajectories (Pre-Collision Only)
+The trajectories now reflect the specified paths for V1 and V2.
+
+V1's Trajectory (Car):
+
+Starting Point: In the inside northbound lane at approximately 
+(
+10
+,
+10
+)
+(10,10).
+Path: Continues straight in the northbound lane, colliding with V2 in an offset-frontal manner as V2 drifts into its path.
+Collision Point: Impact with V2 at approximately 
+(
+25
+,
+10
+)
+(25,10).
+Trajectory Coordinates: 
+(
+10
+,
+10
+)
+(10,10), 
+(
+15
+,
+10
+)
+(15,10), 
+(
+20
+,
+10
+)
+(20,10), 
+(
+25
+,
+10
+)
+(25,10).
+V2's Trajectory (Car):
+
+Starting Point: In the inside southbound lane at approximately 
+(
+40
+,
+14
+)
+(40,14), traveling south.
+Path: Drifts left across the center-turn lane and into the northbound lane, colliding with V1.
+Collision Point: Impact with V1 at approximately 
+(
+25
+,
+10
+)
+(25,10).
+Trajectory Coordinates: 
+(
+40
+,
+14
+)
+(40,14), 
+(
+35
+,
+14
+)
+(35,14), 
+(
+30
+,
+12
+)
+(30,12), 
+(
+25
+,
+10
+)
+(25,10).
+Final Output
+
+{
+  "V1_traj": [(10, 10), (15, 10), (20, 10), (25, 10)],
+  "V1_type": "Car",
+  "V2_traj": [(40, 14), (35, 14), (30, 12), (25, 10)],
+  "V2_type": "Car",
+  "Validation": "Passed"
+}

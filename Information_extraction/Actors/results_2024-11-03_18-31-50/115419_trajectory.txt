@@ -1,0 +1,50 @@
+Road Network and Coordinate Setup
+Road Type: Intersection (4-leg).
+Lane Width: 4 meters per lane.
+Coordinate System: Origin at the center of the intersection, with the X-axis extending horizontally and the Y-axis vertically.
+Vehicle and Collision Information
+V1: 1999 Ford Ranger (Pickup), traveling east on a two-lane, two-way dirt road, then entering the intersection from the east and attempting a left (northbound) turn.
+V2: 1999 Dodge Durango (Utility Vehicle), traveling south in the southbound lane of a paved road.
+Collision Point: Inside the intersection, where V1, due to inexperience, continued turning left across the centerline into the path of V2. V2 struck V1’s right side in an L-type configuration.
+Adjusted Trajectories Based on Lane Position and Width
+Vehicle 1 (V1) - Pickup
+Starting Position: In the eastbound lane of the dirt road, stopping briefly before entering the intersection.
+
+Left Turn Trajectory:
+
+Begins a left turn from the east side of the intersection but fails to straighten out, continuing left into the southbound lane of the crossroad.
+Collision Point: Near the center of the intersection, where V1 is struck by V2.
+
+Final Position: Both vehicles came to rest off the road on the northwest corner of the intersection.
+
+Trajectory Points:
+Starting at (20, 2) in the eastbound lane on the dirt road.
+Stopping at the intersection mouth at (10, 2).
+Beginning left turn at (5, 1) and drifting into the southbound lane.
+Collision at approximately (0, 0).
+Final position at (-5, 5), off the northwest corner of the intersection.
+V1 Trajectory: [(20, 2), (10, 2), (5, 1), (0, 0), (-5, 5)]
+
+Vehicle 2 (V2) - Utility Vehicle
+Starting Position: In the southbound lane of the paved road.
+
+Collision Point: Near the center of the intersection.
+
+Final Position: After the collision, comes to rest off the road on the northwest corner.
+
+Trajectory Points:
+Starting at (2, -20) in the southbound lane.
+Approaching the intersection at (2, -10).
+Collision at (0, 0).
+Final position at approximately (-3, 5), off the northwest corner of the intersection.
+V2 Trajectory: [(2, -20), (2, -10), (0, 0), (-3, 5)]
+
+Final Output
+
+{
+  "V1_traj": [(20, 2), (10, 2), (5, 1), (0, 0), (-5, 5)],
+  "V1_type": "Car",
+  "V2_traj": [(2, -20), (2, -10), (0, 0), (-3, 5)],
+  "V2_type": "Car",
+  "Validation": "Passed"
+}

@@ -1,0 +1,39 @@
+To extract the trajectories from the given information, follow these steps:
+
+### Step 1: Coordinate System Setup
+- **Road Type**: T-intersection.
+- Set the origin at the center of the intersection, with roads extending along the coordinate axes.
+- The X-axis extends horizontally, with the positive direction to the right.
+- The Y-axis extends vertically, with the positive direction upwards.
+
+### Step 2: Identify Vehicles
+- **V1**: A 1999 Chevrolet Malibu, classified as a "Car".
+- **V2**: A 2003 Saturn Ion, classified as a "Car".
+
+### Step 3: Map Starting and Collision Points
+- **V1 Starting Point**: At the mouth of the commercial driveway, facing west, approximately at (-5, 0).
+- **Collision Point**: The center of the intersection, approximately at (0, 0).
+- **V2 Starting Point**: Approaching from the south, along the northbound lane, approximately at (0, -20).
+
+### Step 4: Estimate Trajectories
+Using linear interpolation based on the starting and collision points:
+
+- **V1 Trajectory**: 
+  - Starting: (-5, 0)
+  - Intermediate Points: (-4, 0), (-2, 0)
+  - Collision: (0, 0)
+
+- **V2 Trajectory**: 
+  - Starting: (0, -20)
+  - Intermediate Points: (0, -10), (0, -5)
+  - Collision: (0, 0)
+
+### Output
+
+{
+  'V1_traj': [(-5, 0), (-4, 0), (-2, 0), (0, 0)], 
+  'V1_type': 'Car', 
+  'V2_traj': [(0, -20), (0, -10), (0, -5), (0, 0)], 
+  'V2_type': 'Car', 
+  'Validation': 'Passed'
+}

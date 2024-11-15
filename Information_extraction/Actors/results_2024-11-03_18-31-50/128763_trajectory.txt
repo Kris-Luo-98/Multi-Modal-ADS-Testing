@@ -1,0 +1,120 @@
+Analysis and Output for the Crash Case
+1. Road Setup
+Road Type: Two-lane, two-way rural road (one lane in each direction: eastbound and westbound).
+Road Length: 100 meters.
+Lane Width: 4 meters per lane.
+Conditions: Daylight, raining, with a wet road surface.
+2. Vehicle Identification
+Vehicle 1 (V1): 2006 Chevrolet Malibu, 4-door sedan (classified as Car).
+
+Movement: Traveling west in the westbound lane.
+Collision Sequence: V1 attempted to brake but was unable to avoid V2, which had crossed into its path after hydroplaning.
+Impact: Front of V1 struck the rear of V2.
+Post-Collision Position: V1 was redirected northwest, departing the road and coming to rest off the roadway facing north-northwest.
+Vehicle 2 (V2): 1993 Jeep Wrangler, utility vehicle (classified as Car).
+
+Movement: Traveling east in the eastbound lane, hydroplaned upon hitting a standing puddle, and lost control.
+Collision Sequence: Rotated counterclockwise, crossed the centerline, and entered the westbound lane backward.
+Impact: Rear of V2 was struck by the front of V1.
+Post-Collision Position: Pushed forward to the west, came to rest in the middle of the road facing south-southwest.
+3. Coordinate System and Trajectory Mapping
+The origin is set at the bottom-left of the westbound lane, with:
+
+X-axis extending horizontally to the right (east-to-west direction).
+Y-axis extending vertically upwards.
+4. Corrected Trajectories (Pre-Collision Only)
+The trajectory for V1 is now updated to reflect the specified path.
+
+V1's Trajectory (Car):
+
+Starting Point: In the westbound lane at approximately 
+(
+10
+,
+2
+)
+(10,2).
+Path: Continues straight, veering slightly upwards as it approaches V2, resulting in a frontal collision with V2’s rear.
+Collision Point: Impact with V2 at approximately 
+(
+50
+,
+6
+)
+(50,6).
+Trajectory Coordinates: 
+(
+10
+,
+2
+)
+(10,2), 
+(
+30
+,
+2
+)
+(30,2), 
+(
+40
+,
+4
+)
+(40,4), 
+(
+50
+,
+6
+)
+(50,6).
+V2's Trajectory (Car):
+
+Starting Point: In the eastbound lane at approximately 
+(
+90
+,
+6
+)
+(90,6), traveling east.
+Path: Hits a puddle, hydroplanes, rotates counterclockwise, and crosses into the westbound lane backward.
+Collision Point: Impact with V1 at approximately 
+(
+50
+,
+6
+)
+(50,6).
+Trajectory Coordinates: 
+(
+90
+,
+6
+)
+(90,6), 
+(
+70
+,
+6
+)
+(70,6), 
+(
+60
+,
+6
+)
+(60,6), 
+(
+50
+,
+6
+)
+(50,6).
+Final Output
+
+{
+  "V1_traj": [(10, 2), (30, 2), (40, 4), (50, 6)],
+  "V1_type": "Car",
+  "V2_traj": [(90, 6), (70, 6), (60, 6), (50, 6)],
+  "V2_type": "Car",
+  "Validation": "Passed"
+}

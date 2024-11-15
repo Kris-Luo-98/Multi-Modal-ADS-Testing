@@ -1,0 +1,181 @@
+Analysis and Output for Provided Crash Case
+Based on the crash summary​, road network description, and the provided sketch:
+
+1. Road Setup
+Road Type: Five-lane, two-way urban roadway with a center turn lane (two lanes eastbound, center turn lane, two lanes westbound).
+Road Length: 50 meters.
+Lane Width: 4 meters per lane.
+2. Vehicle Identification
+Vehicle 1 (V1): 1999 Ford Escort, 4-door station wagon (classified as Car).
+
+Movement: Stopped in the center turn lane, facing west, waiting to turn left across eastbound lanes into a gas station.
+Collision Sequence:
+Began turning left across eastbound lanes.
+First impact: Right fender struck by the front of V3 in an angled L-type collision.
+Second impact: Right-rear quarter panel struck by the front of V2 in another L-type collision, redirecting V1 off the south side of the road.
+After the impacts, the left side of V1 sideswiped a wooden fence post before coming to rest.
+Vehicle 2 (V2): 1993 Ford Ranger, 2-door pickup truck (classified as Car).
+
+Movement: Traveling east in the left eastbound lane, slightly behind V3.
+Collision: Front of V2 struck the right-rear quarter panel of V1 after V1's initial collision with V3.
+Vehicle 3 (V3): 1993 Saturn SL2, 4-door sedan (classified as Car).
+
+Movement: Traveling east in the right eastbound lane.
+Collision: Front of V3 struck the right fender of V1 in an angled L-type collision as V1 attempted a left turn.
+3. Coordinate System and Trajectory Mapping
+The origin is set at the bottom-left of the eastbound lanes, with:
+
+X-axis extending horizontally to the right (west-to-east direction).
+Y-axis extending vertically upwards.
+4. Estimated Trajectories
+The trajectories are derived from the vehicle movement descriptions and sketch, assuming 1 unit = 1 meter.
+
+V1's Trajectory (Car):
+
+Starting Point: Stopped in the center turn lane at approximately 
+(
+25
+,
+6
+)
+(25,6).
+Path: Begins turning left across the eastbound lanes, first colliding with V3, then with V2, and finally sideswiping a fence before coming to rest.
+Collision Points: Impact with V3 at approximately 
+(
+20
+,
+4
+)
+(20,4), impact with V2 at approximately 
+(
+18
+,
+3
+)
+(18,3), and sideswipes the fence at approximately 
+(
+10
+,
+2
+)
+(10,2).
+Trajectory Coordinates: 
+(
+25
+,
+6
+)
+(25,6), 
+(
+22
+,
+5
+)
+(22,5), 
+(
+20
+,
+4
+)
+(20,4), 
+(
+18
+,
+3
+)
+(18,3), 
+(
+10
+,
+2
+)
+(10,2).
+V2's Trajectory (Car):
+
+Starting Point: In the left eastbound lane at approximately 
+(
+30
+,
+4
+)
+(30,4), slightly behind V3.
+Path: Continues forward and collides with V1’s right-rear quarter panel after V1's initial collision with V3.
+Collision Point: Impact with V1 at approximately 
+(
+18
+,
+3
+)
+(18,3).
+Trajectory Coordinates: 
+(
+30
+,
+4
+)
+(30,4), 
+(
+25
+,
+4
+)
+(25,4), 
+(
+20
+,
+4
+)
+(20,4), 
+(
+18
+,
+3
+)
+(18,3).
+V3's Trajectory (Car):
+
+Starting Point: In the right eastbound lane at approximately 
+(
+30
+,
+2
+)
+(30,2).
+Path: Continues forward and collides with V1’s right fender as V1 attempts a left turn.
+Collision Point: Impact with V1 at approximately 
+(
+20
+,
+4
+)
+(20,4).
+Trajectory Coordinates: 
+(
+30
+,
+2
+)
+(30,2), 
+(
+25
+,
+2
+)
+(25,2), 
+(
+20
+,
+4
+)
+(20,4).
+Final Output
+
+{
+  "V1_traj": [(25, 6), (22, 5), (20, 4), (18, 3), (10, 2)],
+  "V1_type": "Car",
+  "V2_traj": [(30, 4), (25, 4), (20, 4), (18, 3)],
+  "V2_type": "Car",
+  "V3_traj": [(30, 2), (25, 2), (20, 4)],
+  "V3_type": "Car",
+  "Validation": "Passed"
+}

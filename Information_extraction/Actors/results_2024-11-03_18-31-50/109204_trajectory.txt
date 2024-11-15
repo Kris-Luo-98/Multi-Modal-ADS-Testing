@@ -1,0 +1,52 @@
+Road Network and Coordinate Setup
+Road Type: Intersection (4-leg).
+Lane Setup: Five-lane, two-way road (two westbound lanes, a center left-turn lane, and two eastbound lanes).
+Lane Width: 3.5 meters per lane.
+For eastbound lanes, the centerline of each lane is positioned at intervals of 3.5 meters.
+Coordinate System: Origin is at the center of the intersection, with the X-axis extending horizontally and the Y-axis vertically.
+Vehicle and Collision Information
+V1: 2002 Chevrolet Trailblazer (Car), traveling east in the center left-turn lane, then turning left (north).
+V2: 2002 Freightliner FLD-120 (Truck), traveling east in the right eastbound lane.
+Collision Point: Inside the intersection, where V1 turned left across the path of V2, resulting in an L-type impact on the right side of V1.
+Adjusted Trajectories Based on Lane Position and Width
+Vehicle 1 (V1) - Car
+Starting Position: In the center left-turn lane (located at Y = 1.75 meters from the centerline).
+
+Left Turn Trajectory:
+
+Begins to turn left as it enters the intersection.
+Collision Point: Center of the intersection at approximately (10, 0).
+
+Rotation and Final Position: After the collision, V1 rotates clockwise and moves to rest partially off the northwest corner.
+
+Trajectory Points:
+Starting at (30, 1.75) near the center left-turn lane.
+Entering the intersection at around (20, 1.75).
+Collision at (10, 0).
+Post-collision rotation at approximately (5, -5), coming to rest facing northwest.
+V1 Trajectory: [(30, 1.75), (20, 1.75), (10, 0), (5, -5)]
+
+Vehicle 2 (V2) - Truck
+Starting Position: In the right eastbound lane (positioned at Y = -1.75 meters).
+
+Collision Point: Center of the intersection at approximately (10, 0).
+
+Final Position: Remains within the intersection after sideslapping with V1.
+
+Trajectory Points:
+Starting at (0, -1.75) in the eastbound lane.
+Moving towards (5, -1.75).
+Collision at (10, 0).
+Post-collision position at (15, -1.75).
+V2 Trajectory: [(0, -1.75), (5, -1.75), (10, 0), (15, -1.75)]
+
+Final Output
+
+{
+  "V1_traj": [(30, 1.75), (20, 1.75), (10, 0), (5, -5)],
+  "V1_type": "Car",
+  "V2_traj": [(0, -1.75), (5, -1.75), (10, 0), (15, -1.75)],
+  "V2_type": "Truck",
+  "Validation": "Passed"
+}
+

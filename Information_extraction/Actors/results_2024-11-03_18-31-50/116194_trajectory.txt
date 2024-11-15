@@ -1,0 +1,113 @@
+Analysis and Output for Provided Crash Case
+Based on the crash summary​, road network description, and the provided sketch:
+
+1. Road Setup
+Road Type: Four-lane, two-way road with a center turn lane (two lanes in each direction: westbound and eastbound).
+Road Length: 50 meters.
+Lane Width: 4 meters per lane.
+2. Vehicle Identification
+Vehicle 1 (V1): 2000 Jeep Cherokee, 4-door utility vehicle (classified as Car).
+
+Movement: Traveling west in the right westbound lane when the driver experienced a syncopal episode, possibly due to a blood sugar imbalance.
+Collision Sequence:
+Drifted to the left, crossing the center turn lane.
+Entered the eastbound lane and collided with V2 in an offset frontal collision.
+Vehicle 2 (V2): 1997 Pontiac Grand Prix, 2-door coupe (classified as Car).
+
+Movement: Traveling east in the eastbound lane.
+Collision: Front of V2 struck by the front of V1 in an offset frontal collision.
+3. Coordinate System and Trajectory Mapping
+The origin is set at the bottom-left of the westbound lanes, with:
+
+X-axis extending horizontally to the right (west-to-east direction).
+Y-axis extending vertically upwards.
+4. Estimated Trajectories
+The trajectories are derived from the vehicle movement descriptions and sketch, assuming 1 unit = 1 meter.
+
+V1's Trajectory (Car):
+
+Starting Point: In the right westbound lane at approximately 
+(
+10
+,
+2
+)
+(10,2).
+Path: Drifts left across the center turn lane and enters the eastbound lane.
+Collision Point: Impact with V2 at approximately 
+(
+25
+,
+6
+)
+(25,6).
+Trajectory Coordinates: 
+(
+10
+,
+2
+)
+(10,2), 
+(
+15
+,
+3
+)
+(15,3), 
+(
+20
+,
+4
+)
+(20,4), 
+(
+25
+,
+6
+)
+(25,6).
+V2's Trajectory (Car):
+
+Starting Point: In the eastbound lane at approximately 
+(
+30
+,
+6
+)
+(30,6), traveling east.
+Path: Continues in the eastbound lane until the collision with V1.
+Collision Point: Impact with V1 at approximately 
+(
+25
+,
+6
+)
+(25,6).
+Trajectory Coordinates: 
+(
+30
+,
+6
+)
+(30,6), 
+(
+27
+,
+6
+)
+(27,6), 
+(
+25
+,
+6
+)
+(25,6).
+Final Output
+
+{
+  "V1_traj": [(10, 2), (15, 3), (20, 4), (25, 6)],
+  "V1_type": "Car",
+  "V2_traj": [(30, 6), (27, 6), (25, 6)],
+  "V2_type": "Car",
+  "Validation": "Passed"
+}

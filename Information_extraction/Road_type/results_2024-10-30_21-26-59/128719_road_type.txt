@@ -1,0 +1,16 @@
+### Step 1 - Extract the Road Type
+From the crash summary:
+- The road is described as a **five-lane, two-way road** with two northbound lanes, two southbound lanes, and a center-turn lane.
+- There is no mention of intersections, curves, or merging lanes.
+
+This description suggests a **Straight** road.
+
+### Step 2 - Validation
+From the sketch:
+- The road is depicted with **parallel straight lines** representing multiple lanes (two northbound, two southbound, and a center-turn lane).
+- There are no curves, intersections, or merging lanes visible in the sketch.
+
+The sketch confirms that the road is **Straight**.
+
+### Output
+{'Road type': Straight, 'Validation': Pass}

@@ -1,0 +1,18 @@
+### Step 1 - Extract the Road Type
+From the crash summary:
+- The road is described as a **five-lane, two-way roadway** with two lanes in each direction and a center turn lane.
+- There is no mention of any intersections, curves, or merging lanes.
+- The crash occurred while V1 was attempting to turn left across the eastbound lanes from the center turn lane.
+
+Based on this description, the road type is most likely **Straight**.
+
+### Step 2 - Validation
+From the sketch:
+- The road is depicted as a **straight, multi-lane road** with dashed lines separating the lanes.
+- There is a center turn lane, and no intersecting roads or curves are visible.
+- The road boundaries are straight and parallel, confirming that this is a straight road.
+
+### Output
+The road type extracted from the summary matches the road type depicted in the sketch.
+
+{'Road type': Straight, 'Validation': Pass}

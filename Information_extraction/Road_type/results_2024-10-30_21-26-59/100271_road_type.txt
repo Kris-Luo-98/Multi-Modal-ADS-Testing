@@ -1,0 +1,14 @@
+### Step 1 - Extract the Road Type
+From the crash summary:
+- V1 was traveling on a private road and approaching a **T-intersection**.
+- V2 was traveling on a different road and also approaching the same **T-intersection**.
+
+Based on this description, the road type is clearly a **T-intersection**.
+
+### Step 2 - Validation
+Looking at the sketch:
+- The road network shows a **T-shaped configuration** with three openings: one vertical road and one horizontal road.
+- There are no additional intersecting roads, confirming the **T-intersection** layout.
+
+### Output
+{'Road type': T-intersection, 'Validation': Pass}

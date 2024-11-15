@@ -1,0 +1,60 @@
+Tasks:
+
+Identify Road Type: Determine whether the road type is a straight road, curve, T-intersection, intersection, or merge.
+Extract Road Configuration: Based on the identified road type, answer the relevant questions below, ensuring all details about the road network are included.
+Questions (for each identified road type):
+Straight Road:
+
+How many ways are there on the road?
+What is the total number of lanes on the road?
+What is the road length (in meters)?
+What is the width of a single lane (in meters)?
+Curve:
+
+How many ways are on the main road?
+What is the total number of lanes?
+What is the road length (in meters)?
+What is the width of a single lane (in meters)?
+T-Intersection:
+
+How many ways and lanes are on the main road?
+How many ways and lanes are on the branch road?
+What is the length of the main and branch roads (in meters)?
+What is the width of a single lane (in meters)?
+Intersection:
+
+Maximum number of ways for roads bordering the intersection.
+Maximum number of lanes for roads at the intersection.
+What is the longest distance across the intersection (in meters)?
+Width of a single lane (in meters).
+Merge:
+
+How many ways are there on the road?
+What is the total number of lanes on the road?
+Length of the road (in meters).
+Width of a single lane (in meters).
+
+Reference Information
+For the length and width calculations, you may use the following reference values:
+- **Car**: Length = 5 meters, Width = 2 meters
+- **Truck**: Length = 20 meters, Width = 2.5 meters
+
+Validation:
+After providing your answers, validate them against the dataset. The validation result must be either "Passed" or "Failed" based on consistency with the provided data.
+
+Output format examples of different road types:
+
+1. Straight
+{'Road type': Straight, 'No_ways': <number of ways>, 'No_lanes': <number of lanes>, 'Length': <road length>, 'Width': <single lane width>, 'Validation': 'Passed' or 'Failed'}
+
+2. Curve
+{'Road type': Curve, 'No_ways': <number of ways>, 'No_lanes': <number of lanes>, 'Length': <road length>, 'Width': <single lane width>, 'Validation': 'Passed' or 'Failed'}
+
+3. Intersection
+{'Road type': Intersection, 'No_ways': <number of ways>, 'No_lanes': <number of lanes>, 'Length': <longest distance at the intersection>, 'Width': <width of a single lane>, 'Validation': 'Passed' or 'Failed' }
+
+4. T-intersection
+{'Road type': T-intersection, 'No_ways_main_road': <number of ways on the main road>, 'No_lanes_main_road': <number of lanes on the main road>, 'No_ways_branch_road': <number of ways on the branch road>, 'No_lanes_branch_road': <number of lanes on the branch road>, 'Length_main': <length of the main road>, 'Length_branch': <length of the branch road>, 'Width': <width of a single lane>, 'Validation': 'Passed' or 'Failed' }
+
+5. Merge
+{'Road type': Merge, 'No_ways_main_road': <number of ways on the main road>, 'No_lanes_main_road': <number of lanes on the main road>, 'No_lanes_branch_road': <number of lanes on the branch road>, 'Length_main': <length of the main road>, 'Width': <width of a single lane>, 'Validation': 'Passed' or 'Failed' }

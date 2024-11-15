@@ -1,0 +1,14 @@
+### Step 1 - Extract the Road Type
+From the crash summary:
+- V1 was stopped in a **commercial driveway** and was attempting to turn left onto a **north-south two-lane, two-way road**.
+- V2 was traveling north on the same road.
+
+This description suggests that the crash occurred at a **T-intersection**, where the commercial driveway meets the main road.
+
+### Step 2 - Validation
+Looking at the sketch:
+- The road network shows a **T-shaped configuration** where the commercial driveway (on the left) meets the main road (running north-south).
+- There are no other intersecting roads, confirming the **T-intersection**.
+
+### Output
+{'Road type': T-intersection, 'Validation': Pass}

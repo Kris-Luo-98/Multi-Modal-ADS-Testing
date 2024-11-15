@@ -1,0 +1,46 @@
+Road Network and Coordinate Setup
+Road Type: Intersection (4-leg).
+Lane Configuration: Two-lane, two-way road in each direction.
+Lane Width: 4 meters per lane.
+Coordinate System: Origin is at the center of the intersection, with the X-axis extending horizontally and the Y-axis vertically.
+Vehicle and Collision Information
+V1: 1997 Ford Explorer (SUV), traveling west and attempting a left turn at the intersection.
+V2: 2005 Chevrolet Trailblazer (SUV), traveling north, attempting to brake and steer left to avoid V1.
+Collision Point: Near the center of the intersection, with an initial impact between the front of V2 and the left side of V1 in an L-type configuration. V1 then rotated clockwise, causing a sideslap between V1’s left rear and V2’s right side.
+Final Resting Positions:
+V1: Came to rest facing north in the southbound lane.
+V2: Came to rest off the northwest corner of the intersection, facing north-northwest.
+
+Adjusted Trajectories Based on Specified Coordinates
+Vehicle 1 (V1) - SUV
+Approaching from the East (Westbound Lane):
+
+Trajectory Points:
+Starting at (15, 2) in the westbound lane.
+Moving toward the intersection at (10, 2).
+Beginning the left turn at (5, 1).
+Collision point at the center of the intersection at (0, 0).
+Post-impact rotation to (-2, 2).
+Final resting position at (-5, 4), facing north in the southbound lane.
+V1 Trajectory: [(15, 2), (10, 2), (5, 1), (0, 0), (-2, 2), (-5, 4)]
+
+Vehicle 2 (V2) - SUV
+Approaching from the South (Northbound Lane):
+
+Trajectory Points:
+Starting at (2, -15) in the northbound lane.
+Moving toward the intersection at (2, -10).
+Collision point at the center of the intersection at (0, 0).
+Post-impact movement to (-2, 2).
+Final resting position at (-5, 5), off the northwest corner of the intersection.
+V2 Trajectory: [(2, -15), (2, -10), (0, 0), (-2, 2), (-5, 5)]
+
+Final Output
+
+{
+  "V1_traj": [(15, 2), (10, 2), (5, 1), (0, 0), (-2, 2), (-5, 4)],
+  "V1_type": "Car",
+  "V2_traj": [(2, -15), (2, -10), (0, 0), (-2, 2), (-5, 5)],
+  "V2_type": "Car",
+  "Validation": "Passed"
+}

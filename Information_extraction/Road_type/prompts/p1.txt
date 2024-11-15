@@ -1,0 +1,27 @@
+I have a multi-modality dataset on car crashes, where each crash includes a sketch (graphical) and a summary (text).
+
+In the crash sketches:
+- Road networks, vehicles, trajectories, and crash details are depicted. Vehicles are labeled as V1, V2, etc., typically in red or blue rectangular blocks. **Ignore these vehicles** when analyzing road networks.
+
+In the crash summaries:
+- Each summary describes the road network, traffic participants, trajectories, and environmental details.
+
+### Your Tasks:
+1. **Extract the Road Network** from the crash summary. Select one of these five values:
+   - **Intersection**, **T-intersection**, **Straight**, **Curve**, **Merge**.
+
+2. **Validate** your road type answer against the sketch. If the validation fails, adjust until it passes.
+
+### Important Details:
+- **Intersection**: Formed by crossing roads, with four openings.
+- **T-intersection**: Two roads meeting in a "T" shape, with three openings.
+- **Merge**: Typically involves a straight and a curved road meeting together.
+
+### Output Format:
+Provide results in this structure, without quotation marks:
+{'Road type': <road type>, 'Validation': <Pass/Fail>}
+
+#### Example Outputs:
+- `{'Road type': Intersection, 'Validation': Pass}`
+- `{'Road type': Straight, 'Validation': Pass}`
+- `{'Road type': Merge, 'Validation': Fail}`

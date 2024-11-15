@@ -1,0 +1,14 @@
+Actors:
+  V1_type: Car
+  V2_type: Truck
+Env:
+  Time: Daytime
+  Weather: Rainy
+Road network:
+  Length_main: 50
+  No_lanes_branch_road: 1
+  No_lanes_main_road: 6
+  No_ways_main_road: 2
+  Width: 4
+Road type: Merge
+Scenario: '108909'

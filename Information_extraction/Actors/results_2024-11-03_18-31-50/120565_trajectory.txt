@@ -1,0 +1,46 @@
+Based on the provided details, here’s the output for this crash case:
+
+Road Network and Coordinate Setup
+Road Type: Intersection (4-leg).
+Lane Configuration: Two-lane, two-way rural road (one lane in each direction).
+Lane Width: 4 meters per lane.
+Coordinate System: Origin is set at the center of the intersection, with the X-axis extending horizontally and the Y-axis vertically.
+Vehicle and Collision Information
+V1: 2004 Honda Civic (Coupe), traveling north in the northbound lane, intending to go straight through the intersection.
+V2: 2000 Pontiac Montana (Minivan), traveling east in the eastbound lane, also intending to go straight through the intersection.
+Collision Point: Center of the intersection, where the front of V2 struck the left side of V1 in an L-type configuration.
+Post-Collision Dynamics:
+V1 rotated counterclockwise, departing the intersection at the northeast corner and striking a tree with its right-rear bumper before coming to rest.
+V2 rotated counterclockwise as well, departing the intersection at the northeast corner and striking a telephone/cable access box with its right side.
+Adjusted Trajectories Based on Lane Position and Width
+Vehicle 1 (V1) - Coupe
+Approaching from the South (Northbound Lane):
+
+Trajectory Points:
+Starting at (2, -15) in the northbound lane.
+Moving toward the intersection at (2, -10).
+Collision at the center of the intersection at (0, 0).
+Post-impact counterclockwise rotation to (3, 3).
+Final resting position after striking a tree at approximately (5, 5).
+V1 Trajectory: [(2, -15), (2, -10), (0, 0), (3, 3), (5, 5)]
+
+Vehicle 2 (V2) - Minivan
+Approaching from the West (Eastbound Lane):
+
+Trajectory Points:
+Starting at (-15, 2) in the eastbound lane.
+Moving toward the intersection at (-10, 2).
+Collision at the center of the intersection at (0, 0).
+Post-impact counterclockwise rotation to (3, 3).
+Final resting position after striking a telephone/cable box at approximately (6, 4).
+V2 Trajectory: [(-15, 2), (-10, 2), (0, 0), (3, 3), (6, 4)]
+
+Final Output
+
+{
+  "V1_traj": [(2, -15), (2, -10), (0, 0), (3, 3), (5, 5)],
+  "V1_type": "Car",
+  "V2_traj": [(-15, 2), (-10, 2), (0, 0), (3, 3), (6, 4)],
+  "V2_type": "Car",
+  "Validation": "Passed"
+}

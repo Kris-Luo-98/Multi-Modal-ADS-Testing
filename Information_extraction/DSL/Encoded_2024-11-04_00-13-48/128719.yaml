@@ -1,0 +1,18 @@
+Actors:
+  V1_traj: '[(10, 10), (15, 10), (20, 10), (25, 10)]'
+  V1_type: Car
+  V2_traj: '[(40, 14), (35, 14), (30, 12), (25, 10)]'
+  V2_type: Car
+  Validation: Passed
+Env:
+  Time: Nighttime
+  Validation: Passed
+  Weather: Sunny
+Road network:
+  Length: 50
+  No_lanes: 5
+  No_ways: 2
+  Validation: Passed
+  Width: 4
+Road type: Straight
+Scenario: '128719'

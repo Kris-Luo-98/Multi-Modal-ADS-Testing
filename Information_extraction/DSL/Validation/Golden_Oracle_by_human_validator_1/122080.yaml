@@ -1,0 +1,13 @@
+Actors:
+  V1_type: Car
+  V2_type: Car
+Env:
+  Time: Daytime
+  Weather: Sunny
+Road network:
+  Length: 42
+  No_lanes: 2
+  No_ways: 2
+  Width: 3.5
+Road type: Intersection
+Scenario: '122080'

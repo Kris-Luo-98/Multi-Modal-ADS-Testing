@@ -1,0 +1,6 @@
+{
+   "Weather": "Sunny",
+   "Time": "Daytime",
+   "Car type": "1994 Chevrolet G20",
+   "Validation": "Passed"
+}

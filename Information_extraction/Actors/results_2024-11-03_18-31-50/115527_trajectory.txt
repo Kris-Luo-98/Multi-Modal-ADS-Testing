@@ -1,0 +1,33 @@
+Road Network and Lane Setup
+Lane Width: 3.5 meters per lane.
+This positions each vehicle 2 meters offset from the centerline, placing them within their respective lanes as they approach the intersection.
+Revised Trajectories Based on Lane Position and Width
+Vehicle 1 (V1) - Sedan
+Approaching from the South (Northbound Left Lane):
+
+Trajectory Points:
+Starting at (2, -20) in the northbound left lane.
+Approaching the intersection at (2, -10).
+Collision at the center of the intersection at (0, 0).
+Final resting position at approximately (-3, 5) after the impact.
+V1 Trajectory: [(2, -20), (2, -10), (0, 0), (-3, 5)]
+
+Vehicle 2 (V2) - Minivan
+Approaching from the West (Westbound Left Lane):
+
+Trajectory Points:
+Starting at (-20, -2) in the westbound left lane.
+Moving toward the intersection at (-10, -2).
+Collision at the center of the intersection at (0, 0).
+Final resting position at approximately (5, -2).
+V2 Trajectory: [(-20, -2), (-10, -2), (0, 0), (5, -2)]
+
+Final Output
+
+{
+  "V1_traj": [(2, -20), (2, -10), (0, 0), (-3, 5)],
+  "V1_type": "Car",
+  "V2_traj": [(-20, -2), (-10, -2), (0, 0), (5, -2)],
+  "V2_type": "Car",
+  "Validation": "Passed"
+}

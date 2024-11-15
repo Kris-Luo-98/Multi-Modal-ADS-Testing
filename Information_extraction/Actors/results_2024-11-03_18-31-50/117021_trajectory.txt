@@ -1,0 +1,37 @@
+Road Network and Coordinate Setup
+Road Type: Intersection (4-leg).
+Lane Configuration: Three-lane, two-way road in each direction.
+Lane Width: 3.5 meters per lane.
+Coordinate System: Origin at the center of the intersection, with the X-axis extending horizontally and the Y-axis vertically.
+Vehicle and Collision Information
+V1: 2000 Honda Civic (Coupe), traveling north in the northbound through-lane.
+V2: 2002 Ford Explorer (SUV), traveling west in the westbound through-lane.
+Collision Point: Center of the intersection, where the front of V2 struck the right side of V1 in a T-type configuration.
+Final Resting Positions: No physical evidence available for exact resting positions.
+
+Output with Trajectories
+Vehicle 1 (V1) - Coupe
+Trajectory Points:
+
+Starting at (2, -20) in the northbound through-lane.
+Moving toward the intersection at (2, -10).
+Collision at the center of the intersection at (0, 0).
+V1 Trajectory: [(2, -20), (2, -10), (0, 0)]
+
+Vehicle 2 (V2) - Car
+Updated Trajectory Points:
+
+Starting at (20, 2) in the westbound through-lane.
+Moving toward the intersection at (10, 2).
+Collision at the center of the intersection at (0, 0).
+V2 Trajectory: [(20, 2), (10, 2), (0, 0)]
+
+Output:
+
+{
+  "V1_traj": [(2, -20), (2, -10), (0, 0)],
+  "V1_type": "Car",
+  "V2_traj": [(20, 2), (10, 2), (0, 0)],
+  "V2_type": "Car",
+  "Validation": "Passed"
+}

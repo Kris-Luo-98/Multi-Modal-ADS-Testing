@@ -1,0 +1,6 @@
+{
+   "Weather": "Sunny",
+   "Time": "Daytime",
+   "Car type": "2004 Honda Civic",
+   "Validation": "Passed"
+}

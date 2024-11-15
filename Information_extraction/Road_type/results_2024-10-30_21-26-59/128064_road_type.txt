@@ -1,0 +1,15 @@
+### Step 1 - Extract the Road Type
+From the crash summary:
+- V1 was traveling north on a two-lane, two-way rural roadway.
+- V2 was traveling east on an intersecting two-lane, two-way roadway.
+- Both vehicles entered a **four-leg intersection** at the same time.
+
+Based on this description, the road type is clearly an **Intersection**.
+
+### Step 2 - Validation
+From the sketch:
+- The road network shows two roads crossing each other, forming a **four-leg intersection**.
+- There are no additional roads or merging lanes, confirming the road type as an **Intersection**.
+
+### Output
+{'Road type': Intersection, 'Validation': Pass}

@@ -1,0 +1,55 @@
+### Step 1 - Extract the Number of Ways and Lanes from Crash Summary
+
+1. **Identify Road Details for V1 and V2**:
+   - From the summary:
+     > "Vehicle one (V1 - case vehicle), a 1994 Chevrolet G20, conversion van was traveling north in the northbound lane of a two-lane, two-way rural roadway and approaching a controlled, four-leg intersection with another two-lane, two-way roadway. Vehicle two (V2), a 1992 Ford F150, pickup truck was traveling east in the eastbound lane of the intersecting roadway."
+
+2. **Extract Key Information**:
+   - V1 is on a **two-lane, two-way rural roadway**, so:
+     - **number_of_ways_v1 = 2**
+     - **number_of_lanes_v1 = 2**
+   - V2 is on a **two-lane, two-way roadway**, so:
+     - **number_of_ways_v2 = 2**
+     - **number_of_lanes_v2 = 2**
+
+3. **Determine Answers for Questions 1 and 2**:
+   - For **question 1** (ways): Take the maximum value between `number_of_ways_v1` and `number_of_ways_v2` → **No_ways = 2**
+   - For **question 2** (lanes): Take the maximum value between `number_of_lanes_v1` and `number_of_lanes_v2` → **No_lanes = 2**
+
+### Step 2 - Approximate the Longest Distance Across the Intersection
+
+1. **Analyze the Intersection in the Sketch**:
+   - The intersection is a four-leg intersection with horizontal and vertical roads.
+
+2. **Calculate Horizontal Road Length**:
+   - V2 is on the horizontal road; knowing the truck length is 20 meters, the horizontal road is about 3 truck lengths.
+   - Calculation: `20 x 3 = 60` meters
+
+3. **Calculate Longitudinal Road Length**:
+   - V1 is on the vertical road; knowing the van length is approximately 5 meters, the vertical road is about 7 van lengths.
+   - Calculation: `5 x 7 = 35` meters
+
+4. **Determine Answer for Question 3**:
+   - Take the maximum length between the horizontal and longitudinal roads → **Length = 60** meters
+
+### Step 3 - Estimate Lane Width
+
+1. **Determine Lane Width**:
+   - Given that this is a two-lane, two-way rural road, the typical lane width is **4 meters**.
+
+### Step 4 - Validation
+
+Our answers are: `{'No_ways': 2, 'No_lanes': 2, 'Length': 60, 'Width': 4}`
+
+Validation:
+1. **No_ways**: Matches the summary’s description of "two-way rural roadway" and "two-way roadway."
+2. **No_lanes**: Matches the summary’s description of "two-lane."
+3. **Length**: 60 meters, consistent with 3 truck lengths in the sketch (20 meters per truck).
+4. **Width**: 4 meters, consistent with typical lane width based on road type.
+
+Since all values align with the dataset, the validation is **Passed**.
+
+### Final Output
+```python
+{'No_ways': 2, 'No_lanes': 2, 'Length': 60, 'Width': 4, 'Validation': 'Passed'}
+```

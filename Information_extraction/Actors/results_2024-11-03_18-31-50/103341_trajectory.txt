@@ -1,0 +1,39 @@
+Based on the provided information, here's how the trajectory extraction is performed:
+
+### Coordinate System Setup:
+1. **Road Structure**: The road is a merge type. The main road is horizontal, and the merging road is at an angle, coming from the bottom left.
+2. **Origin**: The origin is at the far-left bottom of the main road.
+
+### Vehicle Identification:
+1. **V1 (2000 Pontiac Sunfire)**: Car. Color: Red.
+2. **V2 (1999 Dodge Ram conversion van)**: Car. Color: Blue.
+
+### Mapping Starting and Collision Points:
+1. **Starting Points**:
+   - **V1**: Starts in the right lane of the eastbound freeway.
+   - **V2**: Starts on the ramp, attempting to merge.
+
+2. **Collision Point**:
+   - The vehicles collide at the end of the entrance ramp.
+
+### Estimate 2D Coordinates:
+- Assume the main road segment for V1’s initial path before merging.
+- V2 is entering from the ramp.
+
+### Trajectory Estimation:
+- **V1 Trajectory**: Begins in the right eastbound lane and moves leftward to the ramp area.
+- **V2 Trajectory**: Travels along the ramp and moves to the right lane of the main road.
+
+### Predicted Trajectories:
+- **V1_traj**: [(5, 2), (25, 3), (40, 4), (45, 6)]
+- **V2_traj**: [(50, 1), (47, 3), (45, 5), (45, 6)]
+
+### Output:
+
+{
+    'V1_traj': [(5, 2), (25, 3), (40, 4), (45, 6)],
+    'V1_type': 'Car',
+    'V2_traj': [(50, 1), (47, 3), (45, 5), (45, 6)],
+    'V2_type': 'Car',
+    'Validation': 'Passed'
+}

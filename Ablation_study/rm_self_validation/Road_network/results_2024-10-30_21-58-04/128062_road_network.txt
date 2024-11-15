@@ -1,0 +1,55 @@
+### Step 1 - Extract the Number of Ways and Lanes from Crash Summary
+
+1. **Identify Road Details for V1 and V2**:
+   - From the summary:
+     > "Vehicle one (V1 - case vehicle), a 2001 Chrysler Sebring, 4-door sedan was traveling south in the left southbound lane of five-lane, two-way urban roadway and was approaching a four-leg intersection with the intention of passing straight through."
+     - V1 is on a **five-lane, two-way urban roadway**.
+     - **number_of_ways_v1 = 2** (since it's a two-way road)
+     - **number_of_lanes_v1 = 5** (as mentioned in the summary)
+
+   - V2 is on the **center turn lane** of the same road, which is part of the five-lane configuration.
+     - **number_of_ways_v2 = 2** (same two-way road)
+     - **number_of_lanes_v2 = 5** (same five-lane road)
+
+2. **Determine Answers for Questions 1 and 2**:
+   - For **question 1** (ways): Take the maximum value between `number_of_ways_v1` and `number_of_ways_v2` → **No_ways = 2**
+   - For **question 2** (lanes): Take the maximum value between `number_of_lanes_v1` and `number_of_lanes_v2` → **No_lanes = 5**
+
+### Step 2 - Approximate the Longest Distance Across the Intersection
+
+1. **Analyze the Intersection in the Sketch**:
+   - The intersection is a four-leg intersection with multiple lanes in each direction.
+   - The road is wide, and the vehicles are positioned across several lanes.
+
+2. **Calculate Horizontal Road Length**:
+   - V1 is on the horizontal road. Using the car length of 5 meters as a reference, the road appears to span approximately 10 car lengths.
+   - Calculation: `5 x 10 = 50` meters
+
+3. **Calculate Longitudinal Road Length**:
+   - V2 is on the vertical road. Using the same car length of 5 meters, the road appears to span approximately 9 car lengths.
+   - Calculation: `5 x 9 = 45` meters
+
+4. **Determine Answer for Question 3**:
+   - Take the maximum length between the horizontal and longitudinal roads → **Length = 50** meters
+
+### Step 3 - Estimate Lane Width
+
+1. **Determine Lane Width**:
+   - Given that this is a five-lane urban roadway, the typical lane width is around **3.5 meters** per lane.
+
+### Step 4 - Validation
+
+Our answers are: `{'No_ways': 2, 'No_lanes': 5, 'Length': 50, 'Width': 3.5}`
+
+Validation:
+1. **No_ways**: Matches the summary’s description of a "two-way urban roadway."
+2. **No_lanes**: Matches the summary’s description of a "five-lane" road.
+3. **Length**: 50 meters, consistent with the approximate number of car lengths in the sketch (5 meters per car).
+4. **Width**: 3.5 meters, consistent with typical lane width for urban roads.
+
+Since all values align with the dataset, the validation is **Passed**.
+
+### Final Output
+```python
+{'No_ways': 2, 'No_lanes': 5, 'Length': 50, 'Width': 3.5, 'Validation': 'Passed'}
+```

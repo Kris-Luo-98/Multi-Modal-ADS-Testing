@@ -1,0 +1,17 @@
+### Step 1 - Extract the Road Type
+From the crash summary:
+- Both vehicles (V1 and V2) were traveling on a **two-lane, two-way rural roadway**.
+- There is no mention of any intersections, curves, or merging roads.
+- The road is described as **straight**.
+
+Thus, based on the summary, the road type is **Straight**.
+
+### Step 2 - Validation
+From the sketch:
+- The road is depicted with **parallel straight lines** extending from one side of the sketch to the other.
+- There are no intersecting roads, curves, or merging lanes visible in the sketch.
+
+The sketch confirms that the road is **Straight**.
+
+### Output
+{'Road type': Straight, 'Validation': Pass}

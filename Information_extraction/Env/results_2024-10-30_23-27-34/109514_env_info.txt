@@ -1,0 +1,13 @@
+Based on the provided summary, here is the extracted environmental information and validation:
+
+1. **Weather**: Not mentioned.
+2. **Time**: The summary mentions "It was dark, the streetlights were illuminated," which corresponds to "Nighttime."
+
+### Final Output:
+```json
+{
+   "Weather": "Not mentioned",
+   "Time": "Nighttime",
+   "Validation": "Passed"
+}
+```

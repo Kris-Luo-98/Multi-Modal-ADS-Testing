@@ -1,0 +1,12 @@
+### Step 1 - Extract the Road Type
+From the crash summary:
+- V1 was traveling on a **one-way entrance ramp** and attempting to enter the right westbound lane of a **divided, limited-access freeway**.
+- This description indicates a **Merge** scenario, where the entrance ramp merges into the freeway.
+
+### Step 2 - Validation
+From the sketch:
+- The road network shows a **curved entrance ramp** merging into a **straight freeway** with multiple lanes.
+- The curved road (entrance ramp) meets the straight road (freeway), confirming a **Merge**.
+
+### Output
+{'Road type': Merge, 'Validation': Pass}

@@ -1,0 +1,121 @@
+Analysis and Output for the Crash Case
+1. Road Setup
+Road Type: Straight, four-lane urban roadway (two lanes for each direction: northbound and southbound).
+Road Length: 50 meters.
+Lane Width: 4 meters per lane.
+2. Vehicle Identification
+Vehicle 1 (V1): 2004 Jeep Grand Cherokee, 4-door utility vehicle (classified as Car).
+
+Movement: Traveling north in the left northbound lane. Swerved left to avoid stopped or slowing traffic, crossing into the left southbound lane.
+Collision: Front of V1 struck the front of V2 in an offset collision in the left southbound lane.
+Vehicle 2 (V2): 1996 Ford Contour, 4-door sedan (classified as Car).
+
+Movement: Traveling south in the left southbound lane.
+Collision: Front of V2 struck by the front of V1 in an offset collision.
+3. Coordinate System and Trajectory Mapping
+The origin is set at the bottom-left of the northbound lanes, with:
+
+X-axis extending horizontally to the right (north-to-south direction).
+Y-axis extending vertically upwards.
+4. Updated Trajectories
+The trajectories now reflect the specified paths.
+
+V1's Trajectory (Car):
+
+Starting Point: In the left northbound lane at approximately 
+(
+5
+,
+6
+)
+(5,6).
+Path: Continues north, then swerves left across to the left southbound lane.
+Collision Point: Impact with V2 at approximately 
+(
+25
+,
+10
+)
+(25,10).
+Trajectory Coordinates: 
+(
+5
+,
+6
+)
+(5,6), 
+(
+15
+,
+6
+)
+(15,6), 
+(
+20
+,
+6
+)
+(20,6), 
+(
+25
+,
+10
+)
+(25,10).
+V2's Trajectory (Car):
+
+Starting Point: In the left southbound lane at approximately 
+(
+45
+,
+10
+)
+(45,10), moving south.
+Path: Continues straight in the left southbound lane.
+Collision Point: Impact with V1 at approximately 
+(
+25
+,
+10
+)
+(25,10).
+Trajectory Coordinates: 
+(
+45
+,
+10
+)
+(45,10), 
+(
+40
+,
+10
+)
+(40,10), 
+(
+35
+,
+10
+)
+(35,10), 
+(
+30
+,
+10
+)
+(30,10), 
+(
+25
+,
+10
+)
+(25,10).
+Final Output
+
+{
+  "V1_traj": [(5, 6), (15, 6), (20, 6), (25, 10)],
+  "V1_type": "Car",
+  "V2_traj": [(45, 10), (40, 10), (35, 10), (30, 10), (25, 10)],
+  "V2_type": "Car",
+  "Validation": "Passed"
+}

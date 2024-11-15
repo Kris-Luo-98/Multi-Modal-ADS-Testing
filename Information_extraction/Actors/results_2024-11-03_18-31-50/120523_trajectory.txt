@@ -1,0 +1,120 @@
+Analysis and Output for Provided Crash Case
+Based on the crash summary​, road network description, and the provided sketch:
+
+1. Road Setup
+Road Type: Two-lane, two-way rural road (one lane in each direction: eastbound and westbound).
+Road Length: 50 meters.
+Lane Width: 4 meters per lane.
+Grade: Positive (uphill) grade for V1 (westbound), negative (downhill) grade for V2 (eastbound).
+Conditions: Daylight, clear weather, and dry road surface.
+2. Vehicle Identification
+Vehicle 1 (V1): 2004 Saturn Ion, 4-door sedan (classified as Car).
+
+Movement: Traveling west in the westbound lane.
+Collision Sequence:
+Drifted left across the centerline, steered right to correct but ran off the road on the right side.
+Over-corrected to the left, re-entering the road in a counterclockwise yaw, crossed the centerline, and was struck on the right side by V2.
+Vehicle 2 (V2): 2005 Dodge Durango, 4-door utility vehicle (classified as Car).
+
+Movement: Traveling east in the eastbound lane.
+Collision Sequence: Attempted to avoid V1 by braking and steering right but was unable to avoid a collision, striking the right side of V1.
+3. Coordinate System and Trajectory Mapping
+The origin is set at the bottom-left of the westbound lane, with:
+
+X-axis extending horizontally to the right (east-to-west direction).
+Y-axis extending vertically upwards.
+4. Estimated Trajectories (Pre-Collision Only)
+The trajectories reflect only the movement leading up to the collision.
+
+V1's Trajectory (Car):
+
+Starting Point: In the westbound lane at approximately 
+(
+10
+,
+2
+)
+(10,2).
+Path: Drifts left across the centerline, exits the road on the right side, over-corrects to the left, re-enters the road in a counterclockwise yaw, and crosses into V2’s lane.
+Collision Point: Impact with V2 at approximately 
+(
+25
+,
+6
+)
+(25,6).
+Trajectory Coordinates: 
+(
+10
+,
+2
+)
+(10,2), 
+(
+15
+,
+3
+)
+(15,3), 
+(
+20
+,
+4
+)
+(20,4), 
+(
+25
+,
+6
+)
+(25,6).
+V2's Trajectory (Car):
+
+Starting Point: In the eastbound lane at approximately 
+(
+40
+,
+6
+)
+(40,6), traveling east.
+Path: Continues straight in the eastbound lane, braking and steering right to avoid V1, but collides with V1 at approximately 
+(
+25
+,
+6
+)
+(25,6).
+Trajectory Coordinates: 
+(
+40
+,
+6
+)
+(40,6), 
+(
+35
+,
+6
+)
+(35,6), 
+(
+30
+,
+6
+)
+(30,6), 
+(
+25
+,
+6
+)
+(25,6).
+Final Output
+
+{
+  "V1_traj": [(10, 2), (15, 3), (20, 4), (25, 6)],
+  "V1_type": "Car",
+  "V2_traj": [(40, 6), (35, 6), (30, 6), (25, 6)],
+  "V2_type": "Car",
+  "Validation": "Passed"
+}

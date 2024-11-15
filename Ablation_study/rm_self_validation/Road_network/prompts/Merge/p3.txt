@@ -1,0 +1,49 @@
+### Analysis Process
+
+#### Step 1 - Extract the Number of Ways and Lanes from Crash Sketch & Summary
+
+1. **Identify Main and Branch Road Features**:
+   - From the sketch:
+     - V1 is driving on the **main road**.
+     - V2 is on the **branch road**, merging into the main road.
+
+2. **Analyze V1’s Road Features in the Crash Summary**:
+   - The crash summary describes V1’s road as:
+     > "Vehicle one (V1 - case vehicle), a 2000 Pontiac Sunfire, 2-door coupe was traveling east in the right eastbound lane of a six-lane divided, limited access freeway (three eastbound travel lanes, protected median, three westbound lanes)."
+   - Based on this, we determine that the main road is a **six-lane, divided road**:
+     - **No_ways_main_road** = 2
+     - **No_lanes_main_road** = 6
+
+3. **Analyze V2’s Road Features in the Crash Summary**:
+   - The crash summary for V2 states:
+     > "Vehicle two (V2), a 1999 Dodge Ram conversion van, was traveling east in the eastbound lane of an entrance ramp and was attempting to enter the same freeway that V1 was traveling on."
+   - Since the summary does not specify the number of lanes on the branch road, we refer to the sketch, where a **dotted lane dividing line** indicates:
+     - **No_lanes_branch_road** = 2
+
+#### Step 2 - Approximate the Length of the Main Road and Lane Width from the Sketch
+
+1. **Calculate Main Road Length**:
+   - In the sketch, the main road spans horizontally from the leftmost to the rightmost ends.
+   - With a car length of 5 meters, we estimate the main road length as approximately 12 car lengths:
+     - **Length_main_road** = 5 x 12 = 60 meters
+
+2. **Estimate Lane Width**:
+   - The car is centered in a lane, with about half a car width on each side.
+   - Calculation: `2 + (2/2) + (2/2) = 4` meters
+     - **Width** = 4 meters
+
+#### Step 3 - Validation
+Our answers are:
+{'No_ways_main_road': 2, 'No_lanes_main_road': 6, 'No_lanes_branch_road': 2, 'Length_main': 60, 'Width': 4}
+
+Validation:
+1. **No_ways_main_road** and **No_lanes_main_road**: Matches the summary’s description of a "six-lane divided, limited access freeway."
+2. **No_lanes_branch_road**: The sketch shows a dotted lane line on the branch road, consistent with two lanes.
+3. **Length_main**: 60 meters, consistent with 12 car lengths (5 meters each) in the sketch.
+4. **Width**: 4 meters, consistent with lane positioning based on car width in the sketch.
+
+Since all values align with the dataset, the validation result is **Passed**.
+
+### Final Output
+Format your output as follows:
+{'No_ways_main_road': 2, 'No_lanes_main_road': 6, 'No_lanes_branch_road': 2, 'Length_main': 60, 'Width': 4, 'Validation': 'Passed'}

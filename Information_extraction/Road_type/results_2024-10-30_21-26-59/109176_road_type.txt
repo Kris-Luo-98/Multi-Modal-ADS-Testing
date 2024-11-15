@@ -1,0 +1,16 @@
+### Step 1 - Extract the Road Type
+From the crash summary:
+- The road is described as a **4-lane, divided, limited access freeway** with two lanes in each direction (southbound and northbound), separated by an unprotected median.
+- There is no mention of intersections, curves, or merging lanes.
+
+Based on this description, the road type is **Straight**.
+
+### Step 2 - Validation
+From the sketch:
+- The road is depicted as a **straight, divided freeway** with two lanes in each direction, separated by a grassy median.
+- There are no intersecting roads, curves, or merging lanes visible in the sketch.
+
+The sketch confirms that the road is straight, so the validation passes.
+
+### Output
+{'Road type': Straight, 'Validation': Pass}

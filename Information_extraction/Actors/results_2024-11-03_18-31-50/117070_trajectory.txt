@@ -1,0 +1,41 @@
+Road Network and Coordinate Setup
+Road Type: Intersection (4-leg).
+Lane Configuration: Two-lane, two-way road in each direction.
+Lane Width: 4 meters per lane.
+Coordinate System: Origin at the center of the intersection, with the X-axis extending horizontally and the Y-axis vertically.
+Vehicle and Collision Information
+V1: 2004 Ford Taurus (Sedan), traveling south in the southbound lane.
+V2: 1997 Chevrolet Lumina (Sedan), traveling east in the eastbound lane.
+Collision Point: Center of the intersection, where V1’s front struck the left side of V2 in an L-type configuration.
+Post-Collision Dynamics:
+V1 rotated counterclockwise, and V2 rotated clockwise, resulting in a side-slap between V1’s right side and V2’s left side.
+Both vehicles departed the southeast corner of the intersection and came to rest in a plowed agricultural field, facing south-southeast.
+
+Trajectories
+
+Vehicle 1 (V1) - Sedan
+Trajectory Points:
+
+Starting at (-2, 15) in the southbound lane.
+Moving toward the intersection at (-2, 10).
+Continuing through the intersection at (-2, 0).
+Post-collision movement to (-2, -5), facing south-southeast.
+V1 Trajectory: [(-2, 15), (-2, 10), (-2, 0), (-2, -5)]
+
+Vehicle 2 (V2) - Sedan
+Trajectory Points:
+
+Starting at (-20, 2) in the eastbound lane.
+Moving toward the intersection at (-10, 2).
+Collision at the center of the intersection at (0, 0).
+V2 Trajectory: [(-20, 2), (-10, 2), (0, 0)]
+
+Final Output
+
+{
+  "V1_traj": [(-2, 15), (-2, 10), (-2, 0), (-2, -5)],
+  "V1_type": "Car",
+  "V2_traj": [(-20, 2), (-10, 2), (0, 0)],
+  "V2_type": "Car",
+  "Validation": "Passed"
+}

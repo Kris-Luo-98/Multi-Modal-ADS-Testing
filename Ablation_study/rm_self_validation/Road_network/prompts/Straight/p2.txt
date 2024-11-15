@@ -1,0 +1,24 @@
+### Task
+Analyze the crash dataset to extract road configuration details and validate the results. Answer the following questions:
+
+1. **How many ways are there on the road?** (integer)
+2. **What is the total number of lanes on the road?** (integer)
+3. **What is the length of the road?** (in meters)
+4. **What is the width of a single lane?** (in meters)
+
+### Validation
+After providing your answers, validate them against the dataset. The validation result must be either **"Passed"** or **"Failed"**.
+
+#### Reference Information
+To assist with your calculations, you may use the following reference values:
+- **Car**: Length = 5 meters, Width = 2 meters
+- **Truck**: Length = 20 meters, Width = 2.5 meters
+
+### Output Format
+Your output should follow this structure:
+{'No_ways': <number of ways>, 'No_lanes': <number of lanes>, 'Length': <road length>, 'Width': <single lane width>, 'Validation': 'Passed' or 'Failed'}
+
+**Note:**
+1. Use quotation marks only for the **Validation** result.
+2. Use only **"Passed"** or **"Failed"** as values for the Validation field.
+

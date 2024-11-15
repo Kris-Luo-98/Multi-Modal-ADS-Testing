@@ -1,0 +1,16 @@
+Actors:
+  V1_type: Car
+  V2_type: Car
+Env:
+  Time: Daytime
+  Weather: Snowy
+Road network:
+  Length_branch: 5
+  Length_main: 40
+  No_lanes_branch_road: 1
+  No_lanes_main_road: 2
+  No_ways_branch_road: 2
+  No_ways_main_road: 2
+  Width: 4
+Road type: T-intersection
+Scenario: '119489'

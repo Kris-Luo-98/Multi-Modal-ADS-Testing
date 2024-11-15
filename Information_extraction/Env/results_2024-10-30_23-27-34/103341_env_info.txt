@@ -1,0 +1,6 @@
+{
+   "Weather": "Rainy",
+   "Time": "Daytime",
+   "Car type": "Pontiac Sunfire",
+   "Validation": "Passed"
+}

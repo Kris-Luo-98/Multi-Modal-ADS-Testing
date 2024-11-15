@@ -1,0 +1,6 @@
+{
+   "Weather": "Snowy",
+   "Time": "Nighttime",
+   "Car type": "GMC Sonoma",
+   "Validation": "Passed"
+}

@@ -1,0 +1,6 @@
+{
+   "Weather": "Cloudy",
+   "Time": "Daytime",
+   "Car type": "Chevrolet Blazer",
+   "Validation": "Passed"
+}

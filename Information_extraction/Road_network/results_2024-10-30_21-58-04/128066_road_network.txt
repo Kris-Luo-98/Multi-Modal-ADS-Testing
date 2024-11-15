@@ -1,0 +1,54 @@
+### Step 1 - Extract the Number of Ways and Lanes from Crash Summary
+
+1. **Identify Road Details for V1 and V2**:
+   - From the summary:
+     > "Vehicle one (V1 - case vehicle), a 2005 Nissan Altima, 4-door sedan was traveling south in the left southbound lane of a three-lane, two-way road and approaching a four-leg intersection with the intention of turning left."
+     - **number_of_ways_v1 = 2** (two-way road)
+     - **number_of_lanes_v1 = 3** (three-lane road)
+
+   - From the summary:
+     > "Vehicle two (V2), a 2001 Ford Explorer Sport Trac, 4-door pickup truck was traveling west in the right westbound lane of a four-lane, two-way road and was approaching the same four-leg intersection as V1."
+     - **number_of_ways_v2 = 2** (two-way road)
+     - **number_of_lanes_v2 = 4** (four-lane road)
+
+2. **Determine Answers for Questions 1 and 2**:
+   - For **question 1** (ways): Take the maximum value between `number_of_ways_v1` and `number_of_ways_v2` → **No_ways = 2**
+   - For **question 2** (lanes): Take the maximum value between `number_of_lanes_v1` and `number_of_lanes_v2` → **No_lanes = 4**
+
+### Step 2 - Approximate the Longest Distance Across the Intersection
+
+1. **Analyze the Intersection in the Sketch**:
+   - The intersection center is located at the center of the sketch with horizontal and vertical roads.
+
+2. **Calculate Horizontal Road Length**:
+   - V2 is on the horizontal road; knowing the truck length is 20 meters, the horizontal road is about 3 truck lengths.
+   - Calculation: `20 x 3 = 60` meters
+
+3. **Calculate Longitudinal Road Length**:
+   - V1 is on the vertical road; knowing the car length is 5 meters, the longitudinal road is about 8 car lengths.
+   - Calculation: `5 x 8 = 40` meters
+
+4. **Determine Answer for Question 3**:
+   - Take the maximum length between the horizontal and longitudinal roads → **Length = 60** meters
+
+### Step 3 - Estimate Lane Width
+
+1. **Determine Lane Width**:
+   - Given that this is a multi-lane road, the typical lane width is **3.5 meters**.
+
+### Step 4 - Validation
+
+Our answers are: `{'No_ways': 2, 'No_lanes': 4, 'Length': 60, 'Width': 3.5}`
+
+Validation:
+1. **No_ways**: Matches the summary’s description of "two-way road" for both V1 and V2.
+2. **No_lanes**: Matches the summary’s description of "three-lane" for V1 and "four-lane" for V2.
+3. **Length**: 60 meters, consistent with 3 truck lengths (20 meters per truck) in the sketch.
+4. **Width**: 3.5 meters, consistent with typical lane width for multi-lane roads.
+
+Since all values align with the dataset, the validation is **Passed**.
+
+### Final Output
+```python
+{'No_ways': 2, 'No_lanes': 4, 'Length': 60, 'Width': 3.5, 'Validation': 'Passed'}
+```

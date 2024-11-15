@@ -1,0 +1,6 @@
+{
+   "Weather": "Snowy",
+   "Time": "Daytime",
+   "Car type": "Utility vehicle",
+   "Validation": "Passed"
+}

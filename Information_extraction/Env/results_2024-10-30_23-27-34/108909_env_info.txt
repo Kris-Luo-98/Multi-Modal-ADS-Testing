@@ -1,0 +1,6 @@
+{
+   "Weather": "Rainy",
+   "Time": "Daytime",
+   "Car type": "1998 Jeep Cherokee Sport",
+   "Validation": "Passed"
+}

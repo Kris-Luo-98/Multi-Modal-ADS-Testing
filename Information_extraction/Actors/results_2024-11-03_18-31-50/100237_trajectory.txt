@@ -1,0 +1,33 @@
+Road Network and Coordinate Setup
+Road Type: Intersection (4-leg)
+Coordinate System: Origin at the center of the intersection.
+Lane Width: 4 meters.
+This places vehicles within a 2-meter offset from the centerline of each road to align with the right-lane travel direction.
+Adjusted Trajectories
+Vehicle 1 (V1) - Car
+Approaching from the West (traveling east in the right lane):
+
+Trajectory Points:
+Starting near the western edge of the map at (-15, -2).
+Moving towards the center of the intersection at (-10, -2), (-5, -2).
+Reaching the collision point at the intersection center (0, 0).
+V1 Trajectory: [(-15, -2), (-10, -2), (-5, -2), (0, 0)]
+
+Vehicle 2 (V2) - Car
+Approaching from the South (traveling north in the right lane):
+
+Trajectory Points:
+Starting near the southern edge of the map at (2, -15).
+Moving towards the center of the intersection at (2, -10), (2, -5).
+Reaching the collision point at the intersection center (0, 0).
+V2 Trajectory: [(2, -15), (2, -10), (2, -5), (0, 0)]
+
+Final Output
+
+{
+  "V1_traj": [(-15, -2), (-10, -2), (-5, -2), (0, 0)],
+  "V1_type": "Car",
+  "V2_traj": [(2, -15), (2, -10), (2, -5), (0, 0)],
+  "V2_type": "Car",
+  "Validation": "Passed"
+}

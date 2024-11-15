@@ -1,0 +1,6 @@
+{
+   "Weather": "Sunny",
+   "Time": "Daytime",
+   "Car type": "Pontiac Aztek",
+   "Validation": "Passed"
+}
