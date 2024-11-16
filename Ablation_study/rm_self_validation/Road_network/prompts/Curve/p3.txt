@@ -16,15 +16,8 @@
    - The car (marked "V1") occupies the middle of a lane, with half its width visible on each side.
    - Calculation: \(2 + \frac{2}{2} + \frac{2}{2} = 4 \, \text{meters}\).
 
-#### Step 3 - Validation
-Verify the extracted values with the dataset:
-- **No_ways** = 2: Matches the description of "two-way rural roadway" in the summary.
-- **No_lanes** = 2: Matches the description of "two-lane" in the summary.
-- **Length** = 50 meters: Consistent with 10 car lengths, as observed in the sketch.
-- **Width** = 4 meters: Consistent with the car’s width and spacing within the lane.
-
 Since all values align with the data, the validation is **Passed**.
 
 ### Final Output
 Format your output as follows:
-{'No_ways': 2, 'No_lanes': 2, 'Length': 50, 'Width': 4, 'Validation': 'Passed'}
+{'No_ways': 2, 'No_lanes': 2, 'Length': 50, 'Width': 4}

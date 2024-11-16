@@ -32,18 +32,6 @@
    - Calculation: `2 + (2/2) + (2/2) = 4` meters
      - **Width** = 4 meters
 
-#### Step 3 - Validation
-Our answers are:
-{'No_ways_main_road': 2, 'No_lanes_main_road': 6, 'No_lanes_branch_road': 2, 'Length_main': 60, 'Width': 4}
-
-Validation:
-1. **No_ways_main_road** and **No_lanes_main_road**: Matches the summary’s description of a "six-lane divided, limited access freeway."
-2. **No_lanes_branch_road**: The sketch shows a dotted lane line on the branch road, consistent with two lanes.
-3. **Length_main**: 60 meters, consistent with 12 car lengths (5 meters each) in the sketch.
-4. **Width**: 4 meters, consistent with lane positioning based on car width in the sketch.
-
-Since all values align with the dataset, the validation result is **Passed**.
-
 ### Final Output
 Format your output as follows:
-{'No_ways_main_road': 2, 'No_lanes_main_road': 6, 'No_lanes_branch_road': 2, 'Length_main': 60, 'Width': 4, 'Validation': 'Passed'}
+{'No_ways_main_road': 2, 'No_lanes_main_road': 6, 'No_lanes_branch_road': 2, 'Length_main': 60, 'Width': 4}

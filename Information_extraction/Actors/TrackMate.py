@@ -101,7 +101,7 @@ def main():
     parser = argparse.ArgumentParser(description='MM ADS Testing - road network extraction')
     parser.add_argument('--data_path', default=r'C:\Users\Kris\Desktop\MM-ADS-Testing\NHTSA\Dataset', type=str,
                         help='Path of MM crash dataset')
-    parser.add_argument('--Gpt_model', default=r'gpt-4-gizmo-g-84pJuqHxd', type=str)
+    parser.add_argument('--Gpt_model', default=r'gpt-4-gizmo-g-vYURX1PCu', type=str)
     parser.add_argument('--road_type_label', default=r'C:\Users\Kris\Desktop\MM-ADS-Testing\Information Extraction\Road Type Extraction\road_type_extract_experiment_2024-10-29_14-28-55\road_type_prediction.xlsx', type=str,
                         help='Path of road type label file')
     parser.add_argument('--road_network',

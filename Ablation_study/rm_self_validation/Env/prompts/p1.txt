@@ -1,11 +1,9 @@
-I have a text-based car crash summary dataset that includes descriptions of road networks, traffic participants, trajectories, and environmental details. Your task is to extract specific environmental information and validate the results as follows:
+I have a text-based car crash summary dataset that includes descriptions of road networks, traffic participants, trajectories, and environmental details. Your task is to extract specific environmental information:
 
 #### Task:
 1. **Extract Environment Information**:
    - **Weather**: Select one from the following options: "Sunny," "Cloudy," "Overcast," "Rainy," "Snowy," "Foggy," "Windy," "Not mentioned."
    - **Time**: Select one from the following options: "Daytime," "Nighttime," "Not mentioned."
-   
-2. **Validation**: Based on the extracted information, provide a validation result with one of these two values: "Passed" or "Failed."
 
 #### Output Format:
 Your response must be structured as:
@@ -14,13 +12,12 @@ Your response must be structured as:
    "Weather": "<your answer for the weather>",
    "Time": "<your answer for the time>",
    "Car type": "<your answer for the car type>",
-   "Validation": "<your answer for the validation>"
 }
 
 ####Notes:
 1. Use quotation marks around each answer.
 2. Example outputs:
 -----
-{"Weather": "Cloudy", "Time": "Daytime", "Validation": "Passed"}
-{"Weather": "Sunny", "Time": "Daytime", "Validation": "Passed"}
+{"Weather": "Cloudy", "Time": "Daytime"}
+{"Weather": "Sunny", "Time": "Daytime"}
 -----

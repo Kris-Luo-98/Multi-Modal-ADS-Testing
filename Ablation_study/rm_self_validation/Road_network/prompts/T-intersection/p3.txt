@@ -33,17 +33,6 @@
    - Calculation: 2 + (2/2) + (2/2) = 4 meters
      - **Width** = 4 meters
 
-#### Step 3 - Validation
-Verify the extracted values with the dataset:
-
-- **No_ways_main_road** and **No_lanes_main_road**: Matches the crash summary’s description of a "three-lane, two-way road."
-- **No_ways_branch_road** and **No_lanes_branch_road**: Matches the crash summary’s description of a "three-lane, two-way private road."
-- **Length_main** = 45 meters: Consistent with approximately 9 car lengths in the sketch.
-- **Length_branch** = 10 meters: Consistent with approximately 2 car lengths in the sketch.
-- **Width** = 4 meters: Consistent with the car’s width and lane spacing in the sketch.
-
-Since all values align with the dataset, the validation result is **Passed**.
-
 ### Final Output
 Format your output as follows:
-{'No_ways_main_road': 2, 'No_lanes_main_road': 3, 'No_ways_branch_road': 2, 'No_lanes_branch_road': 3, 'Length_main': 45, 'Length_branch': 10, 'Width': 4, 'Validation': 'Passed'}
+{'No_ways_main_road': 2, 'No_lanes_main_road': 3, 'No_ways_branch_road': 2, 'No_lanes_branch_road': 3, 'Length_main': 45, 'Length_branch': 10, 'Width': 4}

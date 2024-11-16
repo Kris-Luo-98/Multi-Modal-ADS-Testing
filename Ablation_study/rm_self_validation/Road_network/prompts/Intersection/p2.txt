@@ -1,13 +1,10 @@
 ### Task
-Extract road configuration details from the crash dataset and validate the results. Answer each of the following questions:
+Extract road configuration details from the crash dataset. Answer each of the following questions:
 
 1. **How many ways are there at most for roads bordering the intersection?** (integer)
 2. **How many lanes are there at most for roads bordering the intersection?** (integer)
 3. **What is the longest distance from one end of the intersection to the other?** (in meters)
 4. **What is the width of a single lane?** (in meters)
-
-### Validation
-After providing your answers, validate them against the dataset. The validation result must be either **"Passed"** or **"Failed"**.
 
 #### Reference Information
 For your calculations, you may use the following reference values:
@@ -16,9 +13,4 @@ For your calculations, you may use the following reference values:
 
 ### Output Format
 Present your output in this format:
-{ 'No_ways': <number of ways>, 'No_lanes': <number of lanes>, 'Length': <longest distance at the intersection>, 'Width': <width of a single lane>, 'Validation': 'Passed' or 'Failed' }
-
-
-**Note:**
-1. Use quotation marks only for the **Validation** result.
-2. For Validation, only **"Passed"** or **"Failed"** are acceptable answers.
+{ 'No_ways': <number of ways>, 'No_lanes': <number of lanes>, 'Length': <longest distance at the intersection>, 'Width': <width of a single lane>}

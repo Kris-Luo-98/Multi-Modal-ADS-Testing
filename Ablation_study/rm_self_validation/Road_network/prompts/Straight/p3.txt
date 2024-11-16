@@ -17,15 +17,6 @@
    - Estimate lane width as the car’s width (2 meters) plus half-car-width space on each side.
    - Calculation: \(2 + \frac{2}{2} + \frac{2}{2} = 4 \, \text{meters}\).
 
-#### Step 3 - Validation
-Verify the extracted values with the dataset:
-- **No_ways** = 2: Matches the "two-way roadway" description in the summary.
-- **No_lanes** = 2: Matches the "two-lane" description in the summary.
-- **Length** = 55 meters: Consistent with 11 car lengths, as observed in the sketch.
-- **Width** = 4 meters: Consistent with the car’s width and spacing within the lane.
-
-Since all values align with the data, the validation is **Passed**.
-
 ### Final Output
 Format your output as follows:
-{'No_ways': 2, 'No_lanes': 2, 'Length': 55, 'Width': 4, 'Validation': 'Passed'}
+{'No_ways': 2, 'No_lanes': 2, 'Length': 55, 'Width': 4}

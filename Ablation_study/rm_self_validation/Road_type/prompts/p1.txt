@@ -10,8 +10,6 @@ In the crash summaries:
 1. **Extract the Road Network** from the crash summary. Select one of these five values:
    - **Intersection**, **T-intersection**, **Straight**, **Curve**, **Merge**.
 
-2. **Validate** your road type answer against the sketch. If the validation fails, adjust until it passes.
-
 ### Important Details:
 - **Intersection**: Formed by crossing roads, with four openings.
 - **T-intersection**: Two roads meeting in a "T" shape, with three openings.
@@ -19,9 +17,9 @@ In the crash summaries:
 
 ### Output Format:
 Provide results in this structure, without quotation marks:
-{'Road type': <road type>, 'Validation': <Pass/Fail>}
+{'Road type': <road type>}
 
 #### Example Outputs:
-- `{'Road type': Intersection, 'Validation': Pass}`
-- `{'Road type': Straight, 'Validation': Pass}`
-- `{'Road type': Merge, 'Validation': Fail}`
+- `{'Road type': Intersection}`
+- `{'Road type': Straight}`
+- `{'Road type': Merge}`

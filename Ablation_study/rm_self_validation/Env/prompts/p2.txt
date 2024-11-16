@@ -15,15 +15,5 @@ Please note that:
  (3)if the description of the environment includes 'daylight clear', the corresponding time should be Daytime and weather should be Sunny.
 ----------
 
-----------
-Step 2. Validation
-We bring the extracted answer back to the crash summary for validation:
-Weather: Our answer Snowy corresponds to snowing in the crash summary.
-Time: Our answer Daytime corresponds to daylight in the crash summary.
-
-Validation passed!
-Note: If the validation fails, please repeat from step 1 until the validation passes.
-----------
-
 Final Output:
-{'Weather': 'Snowy', 'Time': 'Daytime', 'Validation': 'Passed'}
+{'Weather': 'Snowy', 'Time': 'Daytime'}
